@@ -1,0 +1,5 @@
+Number of repetitions: 30
+OpenCV average time: 0.000062 s
+NumPy average time:  0.003839 s
+Maximum difference:  37
+Mean difference:     3.124061
