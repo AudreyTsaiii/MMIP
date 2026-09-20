@@ -1,2 +1,0 @@
-# MMIP
-multi-modality
