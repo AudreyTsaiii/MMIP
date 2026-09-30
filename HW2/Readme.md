@@ -19,7 +19,7 @@ matplotlib
 .
 ├── Quiz1_ML.py                  # Quiz 1：Logistic Regression + Random Forest
 ├── Quiz2_DP.py                # Quiz 2：Baseline MLP + Dropout + Early Stopping + Improved
-├── Quiz3_ecaluation.py                 # Quiz 3：MLP vs Logistic Regression 的 ROC / AUC 比較
+├── Quiz3_evaluation.py                 # Quiz 3：MLP vs Logistic Regression 的 ROC / AUC 比較
 ├── quiz2_loss_comparison.png    # Quiz 2：Training / Validation Loss 曲線比較
 ├── quiz2_f1_comparison.png      # Quiz 2：四個模型 F1 比較
 ├── quiz3_roc_comparison.png     # Quiz 3：MLP 與 Logistic Regression 的 ROC 曲線
