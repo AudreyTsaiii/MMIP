@@ -10,7 +10,7 @@
 
 本實驗使用 **CIFAR-10** 影像資料集。
 
-CIFAR-10 共包含 10 個影像類別：
+CIFAR-10 共包含 10 個影像類別:
 
 | Class ID | Class |
 |---:|---|
@@ -31,16 +31,16 @@ CIFAR-10 共包含 10 個影像類別：
 
 ### 1.2 Dataset Split
 
-CIFAR-10 原始資料包含：
+CIFAR-10 原始資料包含:
 
-- Training Dataset：50,000 images
-- Testing Dataset：10,000 images
+- Training Dataset: 50,000 images
+- Testing Dataset: 10,000 images
 
-本實驗再將原始 Training Dataset 切分為：
+本實驗將原始 Training Dataset 進一步切分為: 
 
-- Training：45,000 images
-- Validation：5,000 images
-- Testing：10,000 images
+- Training: 40,000 images
+- Validation: 10,000 images
+- Testing: 10,000 images
 
 Training Dataset 用於模型訓練，Validation Dataset 用於模型選擇與超參數調整，Testing Dataset 則保留至最後進行模型評估。
 
@@ -50,13 +50,13 @@ Training Dataset 用於模型訓練，Validation Dataset 用於模型選擇與�
 
 給定一張 CIFAR-10 RGB 影像，模型需要從 10 個類別中預測該影像所屬的類別。
 
-輸入：
+輸入: 
 
 ```text
 32 × 32 × 3 RGB image
 ```
 
-輸出：
+輸出: 
 
 ```text
 10-class probability
@@ -68,7 +68,7 @@ Training Dataset 用於模型訓練，Validation Dataset 用於模型選擇與�
 
 # 2. Quiz 2 — CNN Image Classification
 
-本實驗比較兩種 CNN：
+本實驗比較兩種 CNN: 
 
 1. 自行設計的 Plain CNN
 2. 經典 CNN Backbone：ResNet18
@@ -81,7 +81,7 @@ Training Dataset 用於模型訓練，Validation Dataset 用於模型選擇與�
 
 Plain CNN 為自行設計的卷積神經網路，透過多層 Convolution、Activation、Pooling 與 Fully Connected Layer 完成影像分類。
 
-模型參數量：
+模型參數量: 
 
 ```text
 620,362 parameters
@@ -96,7 +96,7 @@ Plain CNN 為自行設計的卷積神經網路，透過多層 Convolution、Acti
 
 ### ROC / AUC
 
-Plain CNN 的 Macro-AUC：
+Plain CNN 的 Macro-AUC: 
 
 ```text
 0.965353
@@ -110,7 +110,7 @@ Plain CNN 的 Macro-AUC：
 
 ResNet18 透過 Residual Connection 來改善深層網路的訓練問題，使網路能夠使用更深的架構進行特徵學習。
 
-模型參數量：
+模型參數量: 
 
 ```text
 11,181,642 parameters
@@ -125,7 +125,7 @@ ResNet18 透過 Residual Connection 來改善深層網路的訓練問題，使�
 
 ### ROC / AUC
 
-ResNet18 的 Macro-AUC：
+ResNet18 的 Macro-AUC: 
 
 ```text
 0.983190
@@ -144,11 +144,11 @@ ResNet18 的 Macro-AUC：
 
 ResNet18 的分類表現明顯優於自行設計的 Plain CNN。
 
-在 Testing Dataset 上：
+在 Testing Dataset 上: 
 
-- Top-1 Accuracy：84.23% vs 75.03%
-- Top-5 Accuracy：98.93% vs 98.04%
-- Macro-AUC：0.983190 vs 0.965353
+- Top-1 Accuracy: 84.23% vs 75.03%
+- Top-5 Accuracy: 98.93% vs 98.04%
+- Macro-AUC: 0.983190 vs 0.965353
 
 ResNet18 使用約 11.18M 個參數，而 Plain CNN 僅約 0.62M 個參數。雖然 ResNet18 的模型規模明顯較大，但其較深的網路架構與 Residual Connection 能夠學習更複雜的影像特徵，因此得到較好的分類結果。
 
@@ -162,13 +162,13 @@ ResNet18 使用約 11.18M 個參數，而 Plain CNN 僅約 0.62M 個參數。雖
 
 ## 3.1 Plain CNN
 
-Plain CNN 實驗結果顯示，較適合本模型的 Learning Rate 為：
+Plain CNN 實驗結果顯示，較適合本模型的 Learning Rate 為: 
 
 ```text
 Learning Rate = 0.001
 ```
 
-最佳 Validation 結果：
+最佳 Validation 結果:
 
 | Metric | Result |
 |---|---:|
@@ -184,13 +184,13 @@ Learning Rate = 0.001
 
 ResNet18 實驗中，不同 Learning Rate 對模型表現亦有明顯影響。
 
-最佳設定為：
+最佳設定為: 
 
 ```text
 Learning Rate = 0.0001
 ```
 
-最佳 Validation 結果：
+最佳 Validation 結果: 
 
 | Metric | Result |
 |---|---:|
@@ -218,40 +218,66 @@ RandomHorizontalFlip
 - `RandomCrop(32, padding=4)`：先在影像周圍加入 padding，再隨機裁切回 32×32。
 - `RandomHorizontalFlip`：以隨機方式將影像水平翻轉。
 
-只有 Training Dataset 使用隨機 Data Augmentation。
-
-Validation Dataset 與 Testing Dataset 不使用隨機 augmentation，以確保評估結果具有一致性。
+只有 Training Dataset 使用隨機 Data Augmentation。Validation Dataset 與 Testing Dataset 不使用隨機 augmentation，以確保評估結果具有一致性。
 
 ---
 
 ## 4.1 Plain CNN with Data Augmentation
 
-| Model | Test Top-1 | Test Top-5 |
-|---|---:|---:|
-| Plain CNN | 75.03% | 98.04% |
-| Plain CNN + Augmentation | **待填入實驗結果** | **待填入實驗結果** |
+| Model | Test Top-1 | Test Top-5 | Macro-AUC |
+|---|---:|---:|---:|
+| Plain CNN | 74.22% | 97.87% | 0.963582 |
+| Plain CNN + Augmentation | **75.61%** | **98.41%** | **0.969265** |
 
 ### Observation
 
-加入 Data Augmentation 後，模型在 Training Dataset 中會看到更多不同形式的影像，例如物體位置些微改變或水平翻轉，因此可以降低模型過度依賴特定影像位置與外觀的情況。
+加入 Data Augmentation 後，Plain CNN 的 Test Top-1 Accuracy 從 **74.22% 提升至 75.61%**，增加 **1.39 percentage points**。
 
-最終應比較 augmentation 前後的 Validation / Testing performance，觀察其是否能提升模型的泛化能力。
+Test Top-5 Accuracy 也從 **97.87% 提升至 98.41%**，而 Macro-AUC 則由 **0.963582 提升至 0.969265**。
+
+這表示 Data Augmentation 對 Plain CNN 的泛化能力具有正面影響。透過 RandomCrop 與 RandomHorizontalFlip，模型在訓練過程中可以看到不同位置與方向的影像，因此較不容易過度依賴特定的影像位置或外觀。
+
+不過，提升幅度相對有限，可能與 Plain CNN 本身的模型容量較小有關。
 
 ---
 
 ## 4.2 ResNet18 with Data Augmentation
 
-| Model | Test Top-1 | Test Top-5 |
-|---|---:|---:|
-| ResNet18 | 84.23% | 98.93% |
-| ResNet18 + Augmentation | **待填入實驗結果** | **待填入實驗結果** |
+| Model | Test Top-1 | Test Top-5 | Macro-AUC |
+|---|---:|---:|---:|
+| ResNet18 | 86.17% | 99.40% | 0.987080 |
+| ResNet18 + Augmentation | **89.48%** | **99.61%** | **0.993201** |
 
 ### Observation
 
-ResNet18 本身具有較強的特徵學習能力，因此 Data Augmentation 的效果需要透過實驗結果判斷。
+ResNet18 加入 Data Augmentation 後，Test Top-1 Accuracy 從 **86.17% 提升至 89.48%**，增加 **3.31 percentage points**。
 
-主要比較 augmentation 前後的 Validation 與 Testing Accuracy，以觀察模型是否具有更好的泛化能力。
+同時，Test Top-5 Accuracy 從 **99.40% 提升至 99.61%**，Macro-AUC 則由 **0.987080 提升至 0.993201**。
 
+相較於 Plain CNN，ResNet18 從 Data Augmentation 中獲得更明顯的 Top-1 Accuracy 提升。這表示較深的 CNN 架構能夠更有效地利用 augmentation 所提供的影像變化，學習具有較好泛化能力的特徵。
+
+此外，ResNet18 + Augmentation 的最佳 Validation Top-1 Accuracy 達到 **90.03%**，明顯高於未使用 augmentation 時的 **86.29%**。
+
+整體而言，Data Augmentation 對兩種模型皆有正面效果，其中對 ResNet18 的改善更加明顯。
+
+## 4.3 Overall Comparison
+
+| Model | Augmentation | Parameters | Best Val Top-1 | Test Top-1 | Test Top-5 | Macro-AUC |
+|---|---|---:|---:|---:|---:|---:|
+| Plain CNN | No | 620,362 | 74.77% | 74.22% | 97.87% | 0.963582 |
+| Plain CNN | Yes | 620,362 | 75.73% | 75.61% | 98.41% | 0.969265 |
+| ResNet18 | No | 11,181,642 | 86.29% | 86.17% | 99.40% | 0.987080 |
+| ResNet18 | Yes | 11,181,642 | **90.03%** | **89.48%** | **99.61%** | **0.993201** |
+
+### Overall Observation
+
+Data Augmentation 對兩種模型皆帶來改善。
+
+Plain CNN 的 Test Top-1 Accuracy 提升 **1.39 percentage points**，而 ResNet18 提升 **3.31 percentage points**。這表示 ResNet18 在加入 Data Augmentation 後獲得更明顯的泛化能力提升。
+
+在本實驗中，表現最佳的模型為 **ResNet18 + Data Augmentation**，其 Test Top-1 Accuracy 為 **89.48%**、Test Top-5 Accuracy 為 **99.61%**，Macro-AUC 為 **0.993201**。
+
+因此，本實驗結果顯示 Data Augmentation 能有效改善模型在未見測試資料上的分類表現，而 ResNet18 相較於 Plain CNN 能更充分利用 augmentation 所產生的影像變化。
 ---
 
 # 5. CNN Kernel Visualization
@@ -260,7 +286,7 @@ ResNet18 本身具有較強的特徵學習能力，因此 Data Augmentation 的�
 
 CNN Kernel 可以理解為一組用來偵測影像局部特徵的權重。
 
-在較淺層的 CNN 中，Kernel 通常會學習較基礎的視覺特徵，例如：
+在較淺層的 CNN 中，Kernel 通常會學習較基礎的視覺特徵，例如: 
 
 - Edge
 - Direction
@@ -269,15 +295,17 @@ CNN Kernel 可以理解為一組用來偵測影像局部特徵的權重。
 
 因此可以透過觀察 Kernel 的權重分布，分析模型可能正在偵測哪些影像特徵。
 
-> 此處放置兩個訓練後 Kernel 的 visualization。
+以下為訓練後 Plain CNN 的兩個 Kernel visualization。
+
+![Trained Kernels](results_quiz3/kernel_visualization/plain_cnn_two_kernels.png)
 
 ### Kernel 1
 
-> 此處加入 Kernel 1 圖片與分析。
+Kernel 1 主要呈現模型學習到的局部影像特徵，例如邊緣或方向性的 pattern。
 
 ### Kernel 2
 
-> 此處加入 Kernel 2 圖片與分析。
+Kernel 2 學習到不同的局部特徵，與 Kernel 1 呈現不同的 activation pattern。
 
 ---
 
@@ -305,7 +333,7 @@ Saliency Map 透過計算模型輸出對輸入影像各像素的梯度，衡量�
 
 ### 6.3 XAI Result
 
-本實驗的模型正確預測：
+本實驗的模型正確預測: 
 
 ```text
 True Label: cat
@@ -318,7 +346,7 @@ Saliency Map 顯示模型主要關注貓的臉部、頭部與身體區域，表�
 
 # 7. Overall Results
 
-目前兩個主要 CNN 的結果如下：
+目前兩個主要 CNN 的結果如下: 
 
 | Model | Parameters | Test Top-1 | Test Top-5 | Macro-AUC |
 |---|---:|---:|---:|---:|
@@ -327,7 +355,7 @@ Saliency Map 顯示模型主要關注貓的臉部、頭部與身體區域，表�
 
 ResNet18 在 Top-1 Accuracy、Top-5 Accuracy 以及 Macro-AUC 三項指標皆優於 Plain CNN。
 
-其中最大的差異出現在 Top-1 Accuracy：
+其中最大的差異出現在 Top-1 Accuracy: 
 
 ```text
 ResNet18       84.23%
@@ -349,12 +377,13 @@ Difference      9.20%
 
 1. **CIFAR-10 是一個 10-class image classification dataset，原始影像大小為 32×32。**
 2. **ResNet18 的分類表現優於自行設計的 Plain CNN。**
-3. ResNet18 在 Testing Dataset 上達到 **84.23% Top-1 Accuracy** 與 **98.93% Top-5 Accuracy**。
+3. 在 Quiz 2 baseline experiment 中，ResNet18 在 Testing Dataset 上達到 **84.23% Top-1 Accuracy** 與 **98.93% Top-5 Accuracy**，優於 Plain CNN 的 75.03% 與 98.04%。
 4. ResNet18 的 Macro-AUC 為 **0.983190**，高於 Plain CNN 的 **0.965353**。
-5. 不同 Learning Rate 會影響模型的收斂與最終表現，因此需要透過實驗選擇適合的超參數。
-6. Data Augmentation 可以透過增加 Training Dataset 的影像變化來提升模型的泛化能力，其實際效果需由 augmentation 前後的實驗結果比較。
-7. CNN Kernel Visualization 可以幫助觀察模型學習到的低階影像特徵。
-8. Grad-CAM 可以進一步分析模型預測時主要關注的影像區域。
-9. 由於 CIFAR-10 原始解析度僅為 **32×32**，Grad-CAM 的空間解析度有限，因此本實驗主要著重於模型關注區域的大致位置。
+5. 不同 Learning Rate 會影響模型的收斂與最終表現，因此需要透過實驗選擇適合的超參數。本實驗中，Plain CNN 使用 **0.001**，ResNet18 使用 **0.0001**。
+6. **Data Augmentation 對兩種模型皆帶來正面效果。** Plain CNN 的 Test Top-1 Accuracy 由 74.22% 提升至 75.61%，ResNet18 則由 86.17% 提升至 89.48%。
+7. **ResNet18 + Data Augmentation 為本實驗表現最佳的模型**，Test Top-1 Accuracy 達到 **89.48%**、Test Top-5 Accuracy 達到 **99.61%**，Macro-AUC 為 **0.993201**。
+8. CNN Kernel Visualization 可以幫助觀察模型訓練後學習到的低階視覺特徵與局部 pattern。
+9. Saliency Map 可以進一步分析模型預測時對輸入影像不同區域的敏感程度。
+10. 由於 CIFAR-10 原始解析度僅為 **32×32 pixels**，Saliency Map 的空間解析度有限，因此本實驗主要著重於模型關注區域的大致位置。
 
-除了比較不同 CNN 架構的分類能力，也進一步從 **Hyperparameter、Data Augmentation 與 Explainable AI** 等角度分析影像分類模型的訓練結果與預測行為。
+除了比較不同 CNN 架構的分類能力，也進一步從 **Hyperparameter、Data Augmentation 與 Explainable AI** 等角度分析影像分類模型的訓練結果與預測行為。實驗結果顯示，較深的 ResNet18 搭配 Data Augmentation 能夠取得最佳的分類表現，而 XAI 方法則能進一步提供模型預測行為的視覺化分析。
