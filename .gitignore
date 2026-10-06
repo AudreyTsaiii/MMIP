@@ -1,5 +1,0 @@
-HW3/data/cifar-10-python.tar.gz
-
-# Python cache
-__pycache__/
-*.pyc
