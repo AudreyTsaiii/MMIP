@@ -1,0 +1,19 @@
+{
+  "n_folds": 5,
+  "default_fold": 0,
+  "seed": 42,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "train_pool_size": 50000,
+  "test_size": 10000
+}
