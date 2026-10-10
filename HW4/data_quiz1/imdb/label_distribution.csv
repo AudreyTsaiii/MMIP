@@ -1,0 +1,7 @@
+﻿split,label_id,label,count
+train,0,negative,10000
+train,1,positive,10000
+validation,0,negative,2500
+validation,1,positive,2500
+test,0,negative,12500
+test,1,positive,12500

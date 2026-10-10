@@ -4,3 +4,15 @@ __pycache__/
 
 # CIFAR-10 archive
 HW3/data/cifar-10-python.tar.gz
+
+# Python virtual environments
+.venv/
+venv/
+
+# Downloaded datasets
+HW4/data_quiz1/raw/
+
+# Large model checkpoints
+*.pth
+*.pt
+*.safetensors

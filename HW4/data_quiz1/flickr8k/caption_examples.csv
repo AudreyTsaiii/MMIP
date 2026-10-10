@@ -1,0 +1,16 @@
+﻿split,image_id,caption
+train,row_000000,A black dog is running after a white dog in the snow .
+train,row_000000,Black dog chasing brown dog through snow
+train,row_000000,Two dogs chase each other across the snowy ground .
+train,row_000000,Two dogs play together in the snow .
+train,row_000000,Two dogs running through a low lying body of water .
+validation,row_000000,the boy laying face down on a skateboard is being pushed along the ground by another boy .
+validation,row_000000,Two girls play on a skateboard in a courtyard .
+validation,row_000000,Two people play on a long skateboard .
+validation,row_000000,Two small children in red shirts playing on a skateboard .
+validation,row_000000,two young children on a skateboard going across a sidewalk
+test,row_000000,The dogs are in the snow in front of a fence .
+test,row_000000,The dogs play on the snow .
+test,row_000000,Two brown dogs playfully fight in the snow .
+test,row_000000,Two brown dogs wrestle in the snow .
+test,row_000000,Two dogs playing in the snow .

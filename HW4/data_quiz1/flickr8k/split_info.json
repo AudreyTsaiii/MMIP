@@ -1,0 +1,4 @@
+{
+  "split_method": "preserved Hugging Face train/validation/test splits",
+  "seed": 42
+}

@@ -1,0 +1,4 @@
+﻿split,samples
+train,4500
+validation,500
+test,8000

@@ -1,0 +1,4 @@
+﻿split,image_caption_pairs,unique_images
+train,30000,6000
+validation,5000,1000
+test,5000,1000
