@@ -1,0 +1,37 @@
+{
+  "dataset": "jxie/flickr8k",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "text_decoder": "gpt2",
+  "num_test_images": 200,
+  "bert_score_reference_method": "maximum F1 across references",
+  "metrics": [
+    {
+      "Model": "BLIP Greedy",
+      "Num Images": 200,
+      "BLEU-4": 0.2220276270618883,
+      "BERTScore-F1": 0.9286678633093834,
+      "Avg Generation Seconds": 0.312060081003001
+    },
+    {
+      "Model": "BLIP Beam",
+      "Num Images": 200,
+      "BLEU-4": 0.25260167939065853,
+      "BERTScore-F1": 0.9301211351156234,
+      "Avg Generation Seconds": 0.40844718550506515
+    },
+    {
+      "Model": "CLIP-GPT2 Greedy",
+      "Num Images": 200,
+      "BLEU-4": 0.16610649826723212,
+      "BERTScore-F1": 0.9286058852076531,
+      "Avg Generation Seconds": 0.21103329299599863
+    },
+    {
+      "Model": "CLIP-GPT2 Beam",
+      "Num Images": 200,
+      "BLEU-4": 0.19010269421141623,
+      "BERTScore-F1": 0.9302737861871719,
+      "Avg Generation Seconds": 0.2687951054924633
+    }
+  ]
+}

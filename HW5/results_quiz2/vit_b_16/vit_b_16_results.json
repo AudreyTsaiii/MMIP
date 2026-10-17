@@ -1,0 +1,21 @@
+{
+  "image_backbone": "vit_b_16",
+  "text_backbone": "distilbert-base-uncased",
+  "best_epoch": 10,
+  "best_validation_metrics": {
+    "loss": 0.4481890411073342,
+    "accuracy": 0.8562,
+    "precision": 0.821945046999277,
+    "recall": 0.9094,
+    "f1": 0.8634637295860236,
+    "roc_auc": 0.92270358
+  },
+  "test_metrics": {
+    "loss": 0.44214071532916277,
+    "accuracy": 0.8575,
+    "precision": 0.8176648302825662,
+    "recall": 0.9202,
+    "f1": 0.8659075938646843,
+    "roc_auc": 0.9254185000000001
+  }
+}

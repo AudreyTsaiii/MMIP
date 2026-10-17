@@ -1,0 +1,21 @@
+{
+  "image_backbone": "resnet18",
+  "text_backbone": "distilbert-base-uncased",
+  "best_epoch": 9,
+  "best_validation_metrics": {
+    "loss": 0.3762288521081209,
+    "accuracy": 0.8367,
+    "precision": 0.7807236951809238,
+    "recall": 0.9364,
+    "f1": 0.8515049558970629,
+    "roc_auc": 0.9069066
+  },
+  "test_metrics": {
+    "loss": 0.38687986093759535,
+    "accuracy": 0.8317,
+    "precision": 0.7777591693183721,
+    "recall": 0.9288,
+    "f1": 0.8465955701394585,
+    "roc_auc": 0.9021548400000001
+  }
+}
