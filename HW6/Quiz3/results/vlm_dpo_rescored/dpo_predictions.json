@@ -1,0 +1,3685 @@
+{
+  "model": "DPO Qwen2.5-VL-3B",
+  "peak_gpu_memory_gb": 2.759,
+  "splits": {
+    "target_eval": {
+      "images": 50,
+      "TP": 100,
+      "FP": 13,
+      "FN": 80,
+      "precision": 0.8849557522123894,
+      "recall": 0.5555555555555556,
+      "f1": 0.6825938566552902,
+      "hallucination_rate": 0.11504424778761062,
+      "images_with_unmatched_predicted_categories_rate": 0.24,
+      "empty_prediction_rate": 0.02,
+      "average_latency_sec": 1.2105559999999997
+    },
+    "general_eval": {
+      "images": 30,
+      "TP": 50,
+      "FP": 11,
+      "FN": 39,
+      "precision": 0.819672131147541,
+      "recall": 0.5617977528089888,
+      "f1": 0.6666666666666666,
+      "hallucination_rate": 0.18032786885245902,
+      "images_with_unmatched_predicted_categories_rate": 0.26666666666666666,
+      "empty_prediction_rate": 0.1,
+      "average_latency_sec": 1.27515
+    }
+  },
+  "predictions": {
+    "target_eval": [
+      {
+        "image": "000000467511.jpg",
+        "ground_truth": [
+          "motorcycle",
+          "person",
+          "traffic light"
+        ],
+        "predicted": [
+          "backpack",
+          "motorcycle"
+        ],
+        "raw_answer": "摩托车, 背包, 電話亭, 衣服, 眼鏡, 頭盔, 手套, 鞋子, 條紋圍巾, 背景樹木, 停車場地標，路牌，路燈柱，路燈，路邊停車位，汽油泵，廣告牌，廣告，廣告板，廣告標誌，廣告標誌，廣告標誌，廣告",
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "latency": 3.1392,
+        "matches": [
+          {
+            "category": "motorcycle",
+            "matched_text": "摩托车",
+            "segment": "摩托车"
+          },
+          {
+            "category": "backpack",
+            "matched_text": "背包",
+            "segment": "背包"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "backpack"
+        ],
+        "false_negatives": [
+          "person",
+          "traffic light"
+        ]
+      },
+      {
+        "image": "000000281687.jpg",
+        "ground_truth": [
+          "car",
+          "cell phone",
+          "handbag",
+          "person"
+        ],
+        "predicted": [
+          "handbag",
+          "person"
+        ],
+        "raw_answer": "人, 行李袋, 手提包, 眼鏡, 街燈, 街灯杆, 街灯罩, 街灯柱, 街灯杆上的燈泡, 街灯杆上的燈罩, 街灯杆上的燈泡, 街灯杆上的燈罩, 街灯杆上的燈泡, 街灯杆上的燈罩, 街灯杆上的燈泡, 街灯杆上的燈罩,",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "latency": 3.0935,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人"
+          },
+          {
+            "category": "handbag",
+            "matched_text": "手提包",
+            "segment": "手提包"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "car",
+          "cell phone"
+        ]
+      },
+      {
+        "image": "000000266981.jpg",
+        "ground_truth": [
+          "bus",
+          "car",
+          "person",
+          "suitcase"
+        ],
+        "predicted": [
+          "car",
+          "person",
+          "suitcase",
+          "traffic light"
+        ],
+        "raw_answer": "MGM GRAND, suitcase, red suitcase, person, man, woman, jeans, grass, building, sign, street, sidewalk, palm tree, traffic light, car, people, luggage, suitcase handle, suitcase wheels, suitcase strap, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels, suitcase wheels,",
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "latency": 3.1206,
+        "matches": [
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "red suitcase"
+          },
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          },
+          {
+            "category": "person",
+            "matched_text": "man",
+            "segment": "man"
+          },
+          {
+            "category": "person",
+            "matched_text": "woman",
+            "segment": "woman"
+          },
+          {
+            "category": "traffic light",
+            "matched_text": "traffic light",
+            "segment": "traffic light"
+          },
+          {
+            "category": "car",
+            "matched_text": "car",
+            "segment": "car"
+          },
+          {
+            "category": "person",
+            "matched_text": "people",
+            "segment": "people"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase handle"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase strap"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          },
+          {
+            "category": "suitcase",
+            "matched_text": "suitcase",
+            "segment": "suitcase wheels"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "traffic light"
+        ],
+        "false_negatives": [
+          "bus"
+        ]
+      },
+      {
+        "image": "000000420840.jpg",
+        "ground_truth": [
+          "cake",
+          "chair",
+          "dining table",
+          "person"
+        ],
+        "predicted": [
+          "cake",
+          "chair",
+          "person"
+        ],
+        "raw_answer": "baby, bib, cake, table, chair, door, wall, plant, person",
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.6892,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "baby",
+            "segment": "baby"
+          },
+          {
+            "category": "cake",
+            "matched_text": "cake",
+            "segment": "cake"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          },
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000221872.jpg",
+        "ground_truth": [
+          "bowl",
+          "carrot",
+          "fork"
+        ],
+        "predicted": [
+          "carrot"
+        ],
+        "raw_answer": "macaroni and cheese, boiled egg, roasted carrots, edamame",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.632,
+        "matches": [
+          {
+            "category": "carrot",
+            "matched_text": "carrots",
+            "segment": "roasted carrots"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bowl",
+          "fork"
+        ]
+      },
+      {
+        "image": "000000366225.jpg",
+        "ground_truth": [
+          "cell phone",
+          "keyboard",
+          "mouse",
+          "tv"
+        ],
+        "predicted": [
+          "keyboard",
+          "mouse"
+        ],
+        "raw_answer": "iMac, keyboard, mouse, printer, phone, router",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.5863,
+        "matches": [
+          {
+            "category": "keyboard",
+            "matched_text": "keyboard",
+            "segment": "keyboard"
+          },
+          {
+            "category": "mouse",
+            "matched_text": "mouse",
+            "segment": "mouse"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cell phone",
+          "tv"
+        ]
+      },
+      {
+        "image": "000000072813.jpg",
+        "ground_truth": [
+          "bed",
+          "dog",
+          "tv"
+        ],
+        "predicted": [
+          "bed",
+          "dog",
+          "tv"
+        ],
+        "raw_answer": "狗, 棉被, 床单, 墙壁, 电视",
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.741,
+        "matches": [
+          {
+            "category": "dog",
+            "matched_text": "狗",
+            "segment": "狗"
+          },
+          {
+            "category": "bed",
+            "matched_text": "床",
+            "segment": "床单"
+          },
+          {
+            "category": "tv",
+            "matched_text": "电视",
+            "segment": "电视"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000191288.jpg",
+        "ground_truth": [
+          "horse",
+          "person"
+        ],
+        "predicted": [
+          "horse"
+        ],
+        "raw_answer": "horse, jockey, hurdle",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.3375,
+        "matches": [
+          {
+            "category": "horse",
+            "matched_text": "horse",
+            "segment": "horse"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000110449.jpg",
+        "ground_truth": [
+          "laptop",
+          "person",
+          "remote"
+        ],
+        "predicted": [
+          "remote"
+        ],
+        "raw_answer": "wii remote, headphones, wristband, hat, earring, phone, table",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.6565,
+        "matches": [
+          {
+            "category": "remote",
+            "matched_text": "remote",
+            "segment": "wii remote"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "laptop",
+          "person"
+        ]
+      },
+      {
+        "image": "000000292082.jpg",
+        "ground_truth": [
+          "chair",
+          "person",
+          "tie"
+        ],
+        "predicted": [
+          "chair",
+          "person",
+          "tv"
+        ],
+        "raw_answer": "男士，女孩，椅子，電視機，壁紙，窗簾，戒指，絲襪，領結，耳環",
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "latency": 1.0512,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "女孩",
+            "segment": "女孩"
+          },
+          {
+            "category": "chair",
+            "matched_text": "椅子",
+            "segment": "椅子"
+          },
+          {
+            "category": "tv",
+            "matched_text": "電視機",
+            "segment": "電視機"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "tv"
+        ],
+        "false_negatives": [
+          "tie"
+        ]
+      },
+      {
+        "image": "000000068093.jpg",
+        "ground_truth": [
+          "car",
+          "motorcycle",
+          "person"
+        ],
+        "predicted": [
+          "car",
+          "motorcycle",
+          "person"
+        ],
+        "raw_answer": "motorcycle, helmet, woman, man, car, grass, tree, porch, leaf, ground",
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.8078,
+        "matches": [
+          {
+            "category": "motorcycle",
+            "matched_text": "motorcycle",
+            "segment": "motorcycle"
+          },
+          {
+            "category": "person",
+            "matched_text": "woman",
+            "segment": "woman"
+          },
+          {
+            "category": "person",
+            "matched_text": "man",
+            "segment": "man"
+          },
+          {
+            "category": "car",
+            "matched_text": "car",
+            "segment": "car"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000070774.jpg",
+        "ground_truth": [
+          "bicycle",
+          "bird",
+          "motorcycle"
+        ],
+        "predicted": [
+          "bicycle",
+          "motorcycle"
+        ],
+        "raw_answer": "motorcycle, bicycles, birdcages, plants",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.4887,
+        "matches": [
+          {
+            "category": "motorcycle",
+            "matched_text": "motorcycle",
+            "segment": "motorcycle"
+          },
+          {
+            "category": "bicycle",
+            "matched_text": "bicycles",
+            "segment": "bicycles"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bird"
+        ]
+      },
+      {
+        "image": "000000506279.jpg",
+        "ground_truth": [
+          "dining table",
+          "wine glass"
+        ],
+        "predicted": [
+          "wine glass"
+        ],
+        "raw_answer": "酒杯, 酒杯中的飲料, 棋盤遊戲桌布",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.7809,
+        "matches": [
+          {
+            "category": "wine glass",
+            "matched_text": "酒杯",
+            "segment": "酒杯"
+          },
+          {
+            "category": "wine glass",
+            "matched_text": "酒杯",
+            "segment": "酒杯中的飲料"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000153217.jpg",
+        "ground_truth": [
+          "cat",
+          "motorcycle"
+        ],
+        "predicted": [
+          "cat",
+          "motorcycle"
+        ],
+        "raw_answer": "motorcycle, cat",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.2697,
+        "matches": [
+          {
+            "category": "motorcycle",
+            "matched_text": "motorcycle",
+            "segment": "motorcycle"
+          },
+          {
+            "category": "cat",
+            "matched_text": "cat",
+            "segment": "cat"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000199310.jpg",
+        "ground_truth": [
+          "person",
+          "tennis racket"
+        ],
+        "predicted": [
+          "person",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, jeans, shirt, man",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.4544,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "person",
+            "matched_text": "man",
+            "segment": "man"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000497344.jpg",
+        "ground_truth": [
+          "bottle",
+          "cell phone",
+          "laptop",
+          "person"
+        ],
+        "predicted": [
+          "bottle",
+          "laptop",
+          "person"
+        ],
+        "raw_answer": "laptop, baby, phone, bottle",
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.3925,
+        "matches": [
+          {
+            "category": "laptop",
+            "matched_text": "laptop",
+            "segment": "laptop"
+          },
+          {
+            "category": "person",
+            "matched_text": "baby",
+            "segment": "baby"
+          },
+          {
+            "category": "bottle",
+            "matched_text": "bottle",
+            "segment": "bottle"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cell phone"
+        ]
+      },
+      {
+        "image": "000000098853.jpg",
+        "ground_truth": [
+          "chair",
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "predicted": [
+          "handbag",
+          "sports ball",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis player, tennis racket, tennis ball, tennis court, crowd, spectators, stadium seats, logo, heart symbol, text, footwear, socks, headband, shorts, shirt, jacket, sweater, hat, sunglasses, handbag, camera, wristband, shoes, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks, socks,",
+        "tp": 2,
+        "fp": 1,
+        "fn": 2,
+        "latency": 3.1407,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "tennis ball",
+            "segment": "tennis ball"
+          },
+          {
+            "category": "handbag",
+            "matched_text": "handbag",
+            "segment": "handbag"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "handbag"
+        ],
+        "false_negatives": [
+          "chair",
+          "person"
+        ]
+      },
+      {
+        "image": "000000136466.jpg",
+        "ground_truth": [
+          "clock",
+          "oven"
+        ],
+        "predicted": [
+          "oven"
+        ],
+        "raw_answer": "oven, stove, kettle, knobs, tiles, wall, floor",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.5531,
+        "matches": [
+          {
+            "category": "oven",
+            "matched_text": "oven",
+            "segment": "oven"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "clock"
+        ]
+      },
+      {
+        "image": "000000395575.jpg",
+        "ground_truth": [
+          "bench",
+          "person"
+        ],
+        "predicted": [
+          "bench",
+          "dog"
+        ],
+        "raw_answer": "bench, dog, tree, bench reflection, dog reflection, tree reflection",
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "latency": 0.5743,
+        "matches": [
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          },
+          {
+            "category": "dog",
+            "matched_text": "dog",
+            "segment": "dog"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench reflection"
+          },
+          {
+            "category": "dog",
+            "matched_text": "dog",
+            "segment": "dog reflection"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "dog"
+        ],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000116479.jpg",
+        "ground_truth": [
+          "bed",
+          "chair",
+          "couch"
+        ],
+        "predicted": [
+          "bed"
+        ],
+        "raw_answer": "bed, bedspread, lamp, curtain, rug",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.4911,
+        "matches": [
+          {
+            "category": "bed",
+            "matched_text": "bed",
+            "segment": "bed"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "chair",
+          "couch"
+        ]
+      },
+      {
+        "image": "000000353518.jpg",
+        "ground_truth": [
+          "boat",
+          "person"
+        ],
+        "predicted": [
+          "boat"
+        ],
+        "raw_answer": "boats, sand, water, sky",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.3953,
+        "matches": [
+          {
+            "category": "boat",
+            "matched_text": "boats",
+            "segment": "boats"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000423123.jpg",
+        "ground_truth": [
+          "backpack",
+          "cell phone",
+          "person",
+          "refrigerator"
+        ],
+        "predicted": [
+          "backpack",
+          "handbag",
+          "refrigerator"
+        ],
+        "raw_answer": "背包, 手提包, 冰箱, 箱子, 鞋子, 袜子, 橡皮筋, 帽子, 衣服, 鞋子, 袜子, 橡皮筋, 衣服, 鞋子, 袜子, 衣服, 鞋子, 袜子, 衣服, 鞋子, 袜子, 衣服, 鞋",
+        "tp": 2,
+        "fp": 1,
+        "fn": 2,
+        "latency": 3.1552,
+        "matches": [
+          {
+            "category": "backpack",
+            "matched_text": "背包",
+            "segment": "背包"
+          },
+          {
+            "category": "handbag",
+            "matched_text": "手提包",
+            "segment": "手提包"
+          },
+          {
+            "category": "refrigerator",
+            "matched_text": "冰箱",
+            "segment": "冰箱"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "handbag"
+        ],
+        "false_negatives": [
+          "cell phone",
+          "person"
+        ]
+      },
+      {
+        "image": "000000343706.jpg",
+        "ground_truth": [
+          "cell phone",
+          "person"
+        ],
+        "predicted": [
+          "cell phone"
+        ],
+        "raw_answer": "手機, 手機殼, 灰色外套, 紅色指甲油",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.807,
+        "matches": [
+          {
+            "category": "cell phone",
+            "matched_text": "手機",
+            "segment": "手機"
+          },
+          {
+            "category": "cell phone",
+            "matched_text": "手機",
+            "segment": "手機殼"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000471789.jpg",
+        "ground_truth": [
+          "dog",
+          "frisbee",
+          "kite",
+          "person"
+        ],
+        "predicted": [
+          "dog",
+          "kite",
+          "person"
+        ],
+        "raw_answer": "kite, grass, person, dog",
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.4513,
+        "matches": [
+          {
+            "category": "kite",
+            "matched_text": "kite",
+            "segment": "kite"
+          },
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          },
+          {
+            "category": "dog",
+            "matched_text": "dog",
+            "segment": "dog"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "frisbee"
+        ]
+      },
+      {
+        "image": "000000194940.jpg",
+        "ground_truth": [
+          "bowl",
+          "broccoli",
+          "carrot",
+          "cup"
+        ],
+        "predicted": [
+          "bowl",
+          "broccoli",
+          "carrot"
+        ],
+        "raw_answer": "Zojirushi, broccoli, carrots, green beans, black bowls",
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.6102,
+        "matches": [
+          {
+            "category": "broccoli",
+            "matched_text": "broccoli",
+            "segment": "broccoli"
+          },
+          {
+            "category": "carrot",
+            "matched_text": "carrots",
+            "segment": "carrots"
+          },
+          {
+            "category": "bowl",
+            "matched_text": "bowls",
+            "segment": "black bowls"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cup"
+        ]
+      },
+      {
+        "image": "000000401862.jpg",
+        "ground_truth": [
+          "person",
+          "truck"
+        ],
+        "predicted": [
+          "person",
+          "truck"
+        ],
+        "raw_answer": "food truck, sign, people, trees",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.4436,
+        "matches": [
+          {
+            "category": "truck",
+            "matched_text": "truck",
+            "segment": "food truck"
+          },
+          {
+            "category": "person",
+            "matched_text": "people",
+            "segment": "people"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000516677.jpg",
+        "ground_truth": [
+          "backpack",
+          "handbag",
+          "person",
+          "skis"
+        ],
+        "predicted": [
+          "backpack",
+          "person",
+          "skis"
+        ],
+        "raw_answer": "skis, backpacks, ski poles, snow, mountain, people",
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.6236,
+        "matches": [
+          {
+            "category": "skis",
+            "matched_text": "skis",
+            "segment": "skis"
+          },
+          {
+            "category": "backpack",
+            "matched_text": "backpacks",
+            "segment": "backpacks"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "person",
+            "matched_text": "people",
+            "segment": "people"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "handbag"
+        ]
+      },
+      {
+        "image": "000000539883.jpg",
+        "ground_truth": [
+          "bench",
+          "book",
+          "person",
+          "remote",
+          "tv"
+        ],
+        "predicted": [
+          "bench",
+          "remote",
+          "tv"
+        ],
+        "raw_answer": "tv, bench, tv remote control, wii console, wii controller, grass, fence, buildings, sky",
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.8775,
+        "matches": [
+          {
+            "category": "tv",
+            "matched_text": "tv",
+            "segment": "tv"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          },
+          {
+            "category": "remote",
+            "matched_text": "remote",
+            "segment": "tv remote control"
+          },
+          {
+            "category": "tv",
+            "matched_text": "tv",
+            "segment": "tv remote control"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "book",
+          "person"
+        ]
+      },
+      {
+        "image": "000000511076.jpg",
+        "ground_truth": [
+          "bench",
+          "bird",
+          "car",
+          "handbag",
+          "person"
+        ],
+        "predicted": [
+          "bench",
+          "person"
+        ],
+        "raw_answer": "seagulls, person, bench, water, sky, clouds, trees, buildings",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3,
+        "latency": 0.6948,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bird",
+          "car",
+          "handbag"
+        ]
+      },
+      {
+        "image": "000000005001.jpg",
+        "ground_truth": [
+          "bicycle",
+          "handbag",
+          "person",
+          "scissors"
+        ],
+        "predicted": [],
+        "raw_answer": "balloon, helmet, ribbon, watch, camera, hat",
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "latency": 0.5709,
+        "matches": [],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bicycle",
+          "handbag",
+          "person",
+          "scissors"
+        ]
+      },
+      {
+        "image": "000000232563.jpg",
+        "ground_truth": [
+          "handbag",
+          "person",
+          "umbrella"
+        ],
+        "predicted": [
+          "backpack",
+          "person",
+          "umbrella"
+        ],
+        "raw_answer": "人, 雨傘, 眼鏡, 衣服, 行走, 街道, 標誌牌, 背包, 建築物, 玻璃窗, 經濟, 風, 天氣, 黑色外套, 紫色雨傘, 黑白雨傘, 玻璃窗, 經濟, 黑色外套, �",
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "latency": 3.1626,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人"
+          },
+          {
+            "category": "umbrella",
+            "matched_text": "雨傘",
+            "segment": "雨傘"
+          },
+          {
+            "category": "backpack",
+            "matched_text": "背包",
+            "segment": "背包"
+          },
+          {
+            "category": "umbrella",
+            "matched_text": "雨傘",
+            "segment": "紫色雨傘"
+          },
+          {
+            "category": "umbrella",
+            "matched_text": "雨傘",
+            "segment": "黑白雨傘"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "backpack"
+        ],
+        "false_negatives": [
+          "handbag"
+        ]
+      },
+      {
+        "image": "000000286908.jpg",
+        "ground_truth": [
+          "bowl",
+          "cup",
+          "dining table",
+          "donut"
+        ],
+        "predicted": [
+          "bowl"
+        ],
+        "raw_answer": "鮭魚, 麵條, 米飯, 蔬菜, 水果, 醬汁, 碗, 盤子, 餐巾紙, 食物, 食材",
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "latency": 1.7874,
+        "matches": [
+          {
+            "category": "bowl",
+            "matched_text": "碗",
+            "segment": "碗"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cup",
+          "dining table",
+          "donut"
+        ]
+      },
+      {
+        "image": "000000140556.jpg",
+        "ground_truth": [
+          "fire hydrant",
+          "person",
+          "truck"
+        ],
+        "predicted": [
+          "fire hydrant"
+        ],
+        "raw_answer": "消防栓, 工作服, 安全帽, 反光背心",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.7357,
+        "matches": [
+          {
+            "category": "fire hydrant",
+            "matched_text": "消防栓",
+            "segment": "消防栓"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person",
+          "truck"
+        ]
+      },
+      {
+        "image": "000000572900.jpg",
+        "ground_truth": [
+          "frisbee",
+          "person",
+          "potted plant",
+          "sandwich"
+        ],
+        "predicted": [
+          "frisbee",
+          "person"
+        ],
+        "raw_answer": "frisbee, shorts, flip-flops, trash can, building, trees, grass, person",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.8082,
+        "matches": [
+          {
+            "category": "frisbee",
+            "matched_text": "frisbee",
+            "segment": "frisbee"
+          },
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "potted plant",
+          "sandwich"
+        ]
+      },
+      {
+        "image": "000000530836.jpg",
+        "ground_truth": [
+          "apple",
+          "banana",
+          "bottle",
+          "bowl",
+          "cup",
+          "dining table",
+          "oven",
+          "refrigerator",
+          "sink",
+          "vase"
+        ],
+        "predicted": [
+          "oven",
+          "refrigerator",
+          "sink"
+        ],
+        "raw_answer": "kitchen, refrigerator, stove, oven, sink, cabinets, drawers, countertops, appliances, curtains, refrigerator, stove, oven, sink, cabinets, drawers, countertops, appliances, curtains",
+        "tp": 3,
+        "fp": 0,
+        "fn": 7,
+        "latency": 1.3456,
+        "matches": [
+          {
+            "category": "refrigerator",
+            "matched_text": "refrigerator",
+            "segment": "refrigerator"
+          },
+          {
+            "category": "oven",
+            "matched_text": "oven",
+            "segment": "oven"
+          },
+          {
+            "category": "sink",
+            "matched_text": "sink",
+            "segment": "sink"
+          },
+          {
+            "category": "refrigerator",
+            "matched_text": "refrigerator",
+            "segment": "refrigerator"
+          },
+          {
+            "category": "oven",
+            "matched_text": "oven",
+            "segment": "oven"
+          },
+          {
+            "category": "sink",
+            "matched_text": "sink",
+            "segment": "sink"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "apple",
+          "banana",
+          "bottle",
+          "bowl",
+          "cup",
+          "dining table",
+          "vase"
+        ]
+      },
+      {
+        "image": "000000283037.jpg",
+        "ground_truth": [
+          "car",
+          "traffic light"
+        ],
+        "predicted": [
+          "car",
+          "traffic light",
+          "truck"
+        ],
+        "raw_answer": "car, traffic light, signboard, billboard, streetlight, truck, car headlights, road, grass, bushes, trees, sky, clouds, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in sky, clouds in",
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "latency": 3.1323,
+        "matches": [
+          {
+            "category": "car",
+            "matched_text": "car",
+            "segment": "car"
+          },
+          {
+            "category": "traffic light",
+            "matched_text": "traffic light",
+            "segment": "traffic light"
+          },
+          {
+            "category": "truck",
+            "matched_text": "truck",
+            "segment": "truck"
+          },
+          {
+            "category": "car",
+            "matched_text": "car",
+            "segment": "car headlights"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "truck"
+        ],
+        "false_negatives": []
+      },
+      {
+        "image": "000000325838.jpg",
+        "ground_truth": [
+          "cell phone",
+          "chair",
+          "keyboard",
+          "laptop",
+          "mouse",
+          "person"
+        ],
+        "predicted": [
+          "chair",
+          "keyboard",
+          "laptop",
+          "mouse",
+          "person"
+        ],
+        "raw_answer": "laptop, keyboard, mouse, chair, table, window, wall, carpet, woman",
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.75,
+        "matches": [
+          {
+            "category": "laptop",
+            "matched_text": "laptop",
+            "segment": "laptop"
+          },
+          {
+            "category": "keyboard",
+            "matched_text": "keyboard",
+            "segment": "keyboard"
+          },
+          {
+            "category": "mouse",
+            "matched_text": "mouse",
+            "segment": "mouse"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          },
+          {
+            "category": "person",
+            "matched_text": "woman",
+            "segment": "woman"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cell phone"
+        ]
+      },
+      {
+        "image": "000000450399.jpg",
+        "ground_truth": [
+          "bowl",
+          "cell phone",
+          "donut",
+          "person",
+          "spoon"
+        ],
+        "predicted": [
+          "donut"
+        ],
+        "raw_answer": "donuts, doughnuts, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, doughnut, dough",
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "latency": 3.2006,
+        "matches": [
+          {
+            "category": "donut",
+            "matched_text": "donuts",
+            "segment": "donuts"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnuts",
+            "segment": "doughnuts"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          },
+          {
+            "category": "donut",
+            "matched_text": "doughnut",
+            "segment": "doughnut"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bowl",
+          "cell phone",
+          "person",
+          "spoon"
+        ]
+      },
+      {
+        "image": "000000428280.jpg",
+        "ground_truth": [
+          "bench",
+          "chair",
+          "keyboard",
+          "laptop"
+        ],
+        "predicted": [
+          "chair",
+          "laptop"
+        ],
+        "raw_answer": "laptop, chair, table, flowers, plants",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.4579,
+        "matches": [
+          {
+            "category": "laptop",
+            "matched_text": "laptop",
+            "segment": "laptop"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bench",
+          "keyboard"
+        ]
+      },
+      {
+        "image": "000000362716.jpg",
+        "ground_truth": [
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "predicted": [
+          "sports ball",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, tennis ball, wristband, shorts, shirt, cap",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.6329,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "tennis ball",
+            "segment": "tennis ball"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000499622.jpg",
+        "ground_truth": [
+          "motorcycle",
+          "person"
+        ],
+        "predicted": [
+          "motorcycle"
+        ],
+        "raw_answer": "motorcycle, police uniform, helmet, sunglasses, street, road, curb, grass, tree trunk",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.7459,
+        "matches": [
+          {
+            "category": "motorcycle",
+            "matched_text": "motorcycle",
+            "segment": "motorcycle"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000520871.jpg",
+        "ground_truth": [
+          "bottle",
+          "cup",
+          "dining table",
+          "fork",
+          "pizza"
+        ],
+        "predicted": [
+          "bottle",
+          "chair",
+          "fork",
+          "pizza"
+        ],
+        "raw_answer": "pizza, fork, plate, bottle, chair, table",
+        "tp": 3,
+        "fp": 1,
+        "fn": 2,
+        "latency": 0.5186,
+        "matches": [
+          {
+            "category": "pizza",
+            "matched_text": "pizza",
+            "segment": "pizza"
+          },
+          {
+            "category": "fork",
+            "matched_text": "fork",
+            "segment": "fork"
+          },
+          {
+            "category": "bottle",
+            "matched_text": "bottle",
+            "segment": "bottle"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "chair"
+        ],
+        "false_negatives": [
+          "cup",
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000309938.jpg",
+        "ground_truth": [
+          "book",
+          "dog"
+        ],
+        "predicted": [
+          "book",
+          "dog"
+        ],
+        "raw_answer": "狗, 衣服, 文件夹, 书, 橱柜",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.6882,
+        "matches": [
+          {
+            "category": "dog",
+            "matched_text": "狗",
+            "segment": "狗"
+          },
+          {
+            "category": "book",
+            "matched_text": "书",
+            "segment": "书"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000427256.jpg",
+        "ground_truth": [
+          "baseball bat",
+          "baseball glove",
+          "person"
+        ],
+        "predicted": [
+          "baseball bat",
+          "baseball glove",
+          "sports ball"
+        ],
+        "raw_answer": "棒球手套, 棒球場, 棒球棒, 棒球制服, 棒球頭盔, 棒球鞋, 棒球手套, 棒球場, 棒球棒, 棒球制服, 棒球頭盔, 棒球鞋",
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "latency": 2.3202,
+        "matches": [
+          {
+            "category": "baseball glove",
+            "matched_text": "棒球手套",
+            "segment": "棒球手套"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球場"
+          },
+          {
+            "category": "baseball bat",
+            "matched_text": "棒球棒",
+            "segment": "棒球棒"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球制服"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球頭盔"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球鞋"
+          },
+          {
+            "category": "baseball glove",
+            "matched_text": "棒球手套",
+            "segment": "棒球手套"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球場"
+          },
+          {
+            "category": "baseball bat",
+            "matched_text": "棒球棒",
+            "segment": "棒球棒"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球制服"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球頭盔"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "棒球",
+            "segment": "棒球鞋"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "sports ball"
+        ],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000139099.jpg",
+        "ground_truth": [
+          "apple",
+          "backpack",
+          "banana",
+          "bicycle",
+          "car",
+          "dog",
+          "handbag",
+          "motorcycle",
+          "person",
+          "umbrella"
+        ],
+        "predicted": [
+          "car",
+          "cell phone",
+          "person",
+          "skateboard",
+          "umbrella"
+        ],
+        "raw_answer": "水蜜桃, 水果攤, 蓬布遮陽篷, 電動滑板車, 帽子, 短褲, 長褲, 遮陽傘, 衣服, 錶，水果，人，頭盔，包，手機，路邊攤，行人，汽車，樹木，天空，遮陽篷，遮陽篷，遮陽篷，遮陽篷，遮陽",
+        "tp": 3,
+        "fp": 2,
+        "fn": 7,
+        "latency": 3.1324,
+        "matches": [
+          {
+            "category": "skateboard",
+            "matched_text": "滑板",
+            "segment": "電動滑板車"
+          },
+          {
+            "category": "umbrella",
+            "matched_text": "遮陽傘",
+            "segment": "遮陽傘"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人"
+          },
+          {
+            "category": "cell phone",
+            "matched_text": "手機",
+            "segment": "手機"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "行人"
+          },
+          {
+            "category": "car",
+            "matched_text": "汽車",
+            "segment": "汽車"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "cell phone",
+          "skateboard"
+        ],
+        "false_negatives": [
+          "apple",
+          "backpack",
+          "banana",
+          "bicycle",
+          "dog",
+          "handbag",
+          "motorcycle"
+        ]
+      },
+      {
+        "image": "000000343218.jpg",
+        "ground_truth": [
+          "car",
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "predicted": [
+          "car",
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, tennis ball, shorts, shirt, shoes, tennis court, fence, car, man",
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.8229,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "tennis ball",
+            "segment": "tennis ball"
+          },
+          {
+            "category": "car",
+            "matched_text": "car",
+            "segment": "car"
+          },
+          {
+            "category": "person",
+            "matched_text": "man",
+            "segment": "man"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000197870.jpg",
+        "ground_truth": [
+          "bench",
+          "bird",
+          "person"
+        ],
+        "predicted": [
+          "bench"
+        ],
+        "raw_answer": "chicken, bench",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.3105,
+        "matches": [
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bird",
+          "person"
+        ]
+      },
+      {
+        "image": "000000004795.jpg",
+        "ground_truth": [
+          "cat",
+          "laptop",
+          "tv"
+        ],
+        "predicted": [
+          "cat",
+          "laptop",
+          "mouse"
+        ],
+        "raw_answer": "cat, computer monitor, laptop, phone, mouse",
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "latency": 0.504,
+        "matches": [
+          {
+            "category": "cat",
+            "matched_text": "cat",
+            "segment": "cat"
+          },
+          {
+            "category": "laptop",
+            "matched_text": "laptop",
+            "segment": "laptop"
+          },
+          {
+            "category": "mouse",
+            "matched_text": "mouse",
+            "segment": "mouse"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "mouse"
+        ],
+        "false_negatives": [
+          "tv"
+        ]
+      },
+      {
+        "image": "000000164602.jpg",
+        "ground_truth": [
+          "person",
+          "sink",
+          "toothbrush"
+        ],
+        "predicted": [
+          "person",
+          "toothbrush"
+        ],
+        "raw_answer": "鏡子, 牙刷, 錯誤, 洗澡盆, 瓷磚, 壁紙, 背景, 人, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影, 人影",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 3.1526,
+        "matches": [
+          {
+            "category": "toothbrush",
+            "matched_text": "牙刷",
+            "segment": "牙刷"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人影"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "sink"
+        ]
+      },
+      {
+        "image": "000000519569.jpg",
+        "ground_truth": [
+          "bottle",
+          "chair",
+          "oven",
+          "vase",
+          "wine glass"
+        ],
+        "predicted": [
+          "oven",
+          "vase"
+        ],
+        "raw_answer": "花瓶, 玻璃杯, 咖啡桌, 餐椅, 橡木地板, 廚房櫃, 燈具, 烤箱, 燈泡, 花束",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3,
+        "latency": 1.6897,
+        "matches": [
+          {
+            "category": "vase",
+            "matched_text": "花瓶",
+            "segment": "花瓶"
+          },
+          {
+            "category": "oven",
+            "matched_text": "烤箱",
+            "segment": "烤箱"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bottle",
+          "chair",
+          "wine glass"
+        ]
+      }
+    ],
+    "general_eval": [
+      {
+        "image": "000000177935.jpg",
+        "ground_truth": [
+          "clock",
+          "knife",
+          "oven",
+          "spoon"
+        ],
+        "predicted": [
+          "oven",
+          "toaster"
+        ],
+        "raw_answer": "stove, oven, towel rack, towel, cabinet, countertop, wall socket, toaster, knife block, utensils, light fixture, wall lamp, wall switch, wall outlet, wall vent, wall cabinet, wall storage, wall storage unit, wall storage container, wall storage box, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall storage compartment, wall",
+        "tp": 1,
+        "fp": 1,
+        "fn": 3,
+        "latency": 3.1564,
+        "matches": [
+          {
+            "category": "oven",
+            "matched_text": "oven",
+            "segment": "oven"
+          },
+          {
+            "category": "toaster",
+            "matched_text": "toaster",
+            "segment": "toaster"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "toaster"
+        ],
+        "false_negatives": [
+          "clock",
+          "knife",
+          "spoon"
+        ]
+      },
+      {
+        "image": "000000500211.jpg",
+        "ground_truth": [
+          "chair",
+          "umbrella"
+        ],
+        "predicted": [
+          "umbrella"
+        ],
+        "raw_answer": "umbrellas, trees, house, sky",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.4439,
+        "matches": [
+          {
+            "category": "umbrella",
+            "matched_text": "umbrellas",
+            "segment": "umbrellas"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "chair"
+        ]
+      },
+      {
+        "image": "000000560011.jpg",
+        "ground_truth": [
+          "bowl",
+          "keyboard",
+          "mouse"
+        ],
+        "predicted": [
+          "keyboard",
+          "mouse"
+        ],
+        "raw_answer": "keyboard, mouse",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.2427,
+        "matches": [
+          {
+            "category": "keyboard",
+            "matched_text": "keyboard",
+            "segment": "keyboard"
+          },
+          {
+            "category": "mouse",
+            "matched_text": "mouse",
+            "segment": "mouse"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bowl"
+        ]
+      },
+      {
+        "image": "000000247917.jpg",
+        "ground_truth": [
+          "baseball glove",
+          "person"
+        ],
+        "predicted": [
+          "baseball glove"
+        ],
+        "raw_answer": "Marlins, baseball caps, baseball gloves, belts, socks, shoes, grass, trees, sky",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.8763,
+        "matches": [
+          {
+            "category": "baseball glove",
+            "matched_text": "baseball gloves",
+            "segment": "baseball gloves"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000209757.jpg",
+        "ground_truth": [
+          "person",
+          "skateboard"
+        ],
+        "predicted": [
+          "person",
+          "skateboard"
+        ],
+        "raw_answer": "skateboarder, skateboard, cap, jeans, sneakers, building, street, trash can",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.7524,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "skateboarder",
+            "segment": "skateboarder"
+          },
+          {
+            "category": "skateboard",
+            "matched_text": "skateboard",
+            "segment": "skateboard"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000571893.jpg",
+        "ground_truth": [
+          "book",
+          "clock",
+          "oven",
+          "vase"
+        ],
+        "predicted": [
+          "book",
+          "person",
+          "vase"
+        ],
+        "raw_answer": "書架, 鐵藝吊燈, 花瓶, 玻璃櫃台面, 鍾表, 電子秤, 機器人, 鐵藝吊燈, 玻璃櫃台面, 鍾表, 電子秤, 機器人, 鐵藝吊燈, 玻璃櫃台面, 鍾表, 電子秤, �",
+        "tp": 2,
+        "fp": 1,
+        "fn": 2,
+        "latency": 3.1451,
+        "matches": [
+          {
+            "category": "book",
+            "matched_text": "書",
+            "segment": "書架"
+          },
+          {
+            "category": "vase",
+            "matched_text": "花瓶",
+            "segment": "花瓶"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "機器人"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "機器人"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "person"
+        ],
+        "false_negatives": [
+          "clock",
+          "oven"
+        ]
+      },
+      {
+        "image": "000000276055.jpg",
+        "ground_truth": [
+          "bottle",
+          "carrot",
+          "chair",
+          "cup",
+          "dining table",
+          "person",
+          "umbrella"
+        ],
+        "predicted": [
+          "bottle",
+          "carrot",
+          "chair",
+          "person",
+          "umbrella"
+        ],
+        "raw_answer": "carrot, woman, black tank top, sunglasses, glass of green drink, wooden crate, blue umbrella, water bottle, greenery, wooden chair, white building, tree, sunglasses on head",
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "latency": 1.3099,
+        "matches": [
+          {
+            "category": "carrot",
+            "matched_text": "carrot",
+            "segment": "carrot"
+          },
+          {
+            "category": "person",
+            "matched_text": "woman",
+            "segment": "woman"
+          },
+          {
+            "category": "umbrella",
+            "matched_text": "umbrella",
+            "segment": "blue umbrella"
+          },
+          {
+            "category": "bottle",
+            "matched_text": "bottle",
+            "segment": "water bottle"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "wooden chair"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "cup",
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000513041.jpg",
+        "ground_truth": [
+          "chair",
+          "dining table",
+          "person",
+          "pizza",
+          "wine glass"
+        ],
+        "predicted": [
+          "person",
+          "pizza",
+          "wine glass"
+        ],
+        "raw_answer": "pizza, wine glass, plate, table, person",
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.5048,
+        "matches": [
+          {
+            "category": "pizza",
+            "matched_text": "pizza",
+            "segment": "pizza"
+          },
+          {
+            "category": "wine glass",
+            "matched_text": "wine glass",
+            "segment": "wine glass"
+          },
+          {
+            "category": "person",
+            "matched_text": "person",
+            "segment": "person"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "chair",
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000268729.jpg",
+        "ground_truth": [
+          "giraffe",
+          "person",
+          "zebra"
+        ],
+        "predicted": [
+          "giraffe",
+          "zebra"
+        ],
+        "raw_answer": "zebra, giraffe, tree, fence, rock, sky",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.5937,
+        "matches": [
+          {
+            "category": "zebra",
+            "matched_text": "zebra",
+            "segment": "zebra"
+          },
+          {
+            "category": "giraffe",
+            "matched_text": "giraffe",
+            "segment": "giraffe"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000310980.jpg",
+        "ground_truth": [
+          "keyboard",
+          "laptop",
+          "teddy bear"
+        ],
+        "predicted": [
+          "laptop",
+          "teddy bear"
+        ],
+        "raw_answer": "teddy bear, laptop",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.338,
+        "matches": [
+          {
+            "category": "teddy bear",
+            "matched_text": "teddy bear",
+            "segment": "teddy bear"
+          },
+          {
+            "category": "laptop",
+            "matched_text": "laptop",
+            "segment": "laptop"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "keyboard"
+        ]
+      },
+      {
+        "image": "000000386352.jpg",
+        "ground_truth": [
+          "chair",
+          "person",
+          "tennis racket"
+        ],
+        "predicted": [
+          "bench",
+          "chair",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, wristband, necklace, earrings, visor, shirt, shorts, bench, chair, sunglasses, watch, bracelet, wristwatch, wristlet, wristband, necklace, earrings, visor, shirt, shorts, bench, chair, sunglasses, watch, bracelet, wristwatch, wristlet, wristband, necklace, earrings, visor, shirt, shorts, bench, chair, sunglasses, watch, bracelet, wristwatch, wristlet, wristband, necklace, earrings",
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "latency": 3.1253,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          },
+          {
+            "category": "bench",
+            "matched_text": "bench",
+            "segment": "bench"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "bench"
+        ],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000261535.jpg",
+        "ground_truth": [
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "predicted": [
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, tennis balls, statue, woman, shorts, headband, wooden fence, concrete floor",
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.8214,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          },
+          {
+            "category": "sports ball",
+            "matched_text": "tennis balls",
+            "segment": "tennis balls"
+          },
+          {
+            "category": "person",
+            "matched_text": "woman",
+            "segment": "woman"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000398742.jpg",
+        "ground_truth": [
+          "car",
+          "person",
+          "sports ball"
+        ],
+        "predicted": [],
+        "raw_answer": "球衣, 球鞋, 橡膠球, 運動衫, 運動褲, 運動鞋, 運動服裝, 運動鞋, 運動衫, 運動褲, 運動服裝, 運動鞋, 運動衫, 運動褲, 運動服裝, 運動鞋, 運動衫",
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "latency": 3.141,
+        "matches": [],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "car",
+          "person",
+          "sports ball"
+        ]
+      },
+      {
+        "image": "000000053624.jpg",
+        "ground_truth": [
+          "elephant",
+          "person"
+        ],
+        "predicted": [
+          "elephant"
+        ],
+        "raw_answer": "elephant, log, rocks, water puddle",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.4852,
+        "matches": [
+          {
+            "category": "elephant",
+            "matched_text": "elephant",
+            "segment": "elephant"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000334521.jpg",
+        "ground_truth": [
+          "bird",
+          "giraffe",
+          "person"
+        ],
+        "predicted": [
+          "bird",
+          "giraffe"
+        ],
+        "raw_answer": "giraffe, fence, bird, tree",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.422,
+        "matches": [
+          {
+            "category": "giraffe",
+            "matched_text": "giraffe",
+            "segment": "giraffe"
+          },
+          {
+            "category": "bird",
+            "matched_text": "bird",
+            "segment": "bird"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000563470.jpg",
+        "ground_truth": [
+          "baseball bat",
+          "chair",
+          "person"
+        ],
+        "predicted": [
+          "baseball bat",
+          "person"
+        ],
+        "raw_answer": "人, 球棒, 地面, 植物, 天空",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.7557,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "人"
+          },
+          {
+            "category": "baseball bat",
+            "matched_text": "球棒",
+            "segment": "球棒"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "chair"
+        ]
+      },
+      {
+        "image": "000000440336.jpg",
+        "ground_truth": [
+          "frisbee",
+          "person"
+        ],
+        "predicted": [
+          "frisbee"
+        ],
+        "raw_answer": "frisbee, shorts, socks, sunglasses, grass, night sky",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.5674,
+        "matches": [
+          {
+            "category": "frisbee",
+            "matched_text": "frisbee",
+            "segment": "frisbee"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person"
+        ]
+      },
+      {
+        "image": "000000190648.jpg",
+        "ground_truth": [
+          "bed",
+          "chair"
+        ],
+        "predicted": [
+          "bed",
+          "chair"
+        ],
+        "raw_answer": "bed, bedspread, wall, window, light switch, chair",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "latency": 0.593,
+        "matches": [
+          {
+            "category": "bed",
+            "matched_text": "bed",
+            "segment": "bed"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": []
+      },
+      {
+        "image": "000000402774.jpg",
+        "ground_truth": [
+          "handbag",
+          "person",
+          "umbrella"
+        ],
+        "predicted": [
+          "backpack",
+          "umbrella"
+        ],
+        "raw_answer": "雨伞, 女性, 长裤, 背包",
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "latency": 0.6934,
+        "matches": [
+          {
+            "category": "umbrella",
+            "matched_text": "雨伞",
+            "segment": "雨伞"
+          },
+          {
+            "category": "backpack",
+            "matched_text": "背包",
+            "segment": "背包"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "backpack"
+        ],
+        "false_negatives": [
+          "handbag",
+          "person"
+        ]
+      },
+      {
+        "image": "000000442993.jpg",
+        "ground_truth": [
+          "boat",
+          "clock",
+          "potted plant"
+        ],
+        "predicted": [
+          "clock"
+        ],
+        "raw_answer": "clock tower, houses, windows, lights, trees, water, steps",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.6082,
+        "matches": [
+          {
+            "category": "clock",
+            "matched_text": "clock",
+            "segment": "clock tower"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "boat",
+          "potted plant"
+        ]
+      },
+      {
+        "image": "000000448365.jpg",
+        "ground_truth": [
+          "bicycle",
+          "person",
+          "skateboard"
+        ],
+        "predicted": [
+          "person",
+          "skateboard"
+        ],
+        "raw_answer": "skateboarder, skateboard, shorts, sunglasses, shirt, clouds, trees, sky",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.7222,
+        "matches": [
+          {
+            "category": "person",
+            "matched_text": "skateboarder",
+            "segment": "skateboarder"
+          },
+          {
+            "category": "skateboard",
+            "matched_text": "skateboard",
+            "segment": "skateboard"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "bicycle"
+        ]
+      },
+      {
+        "image": "000000033368.jpg",
+        "ground_truth": [
+          "person",
+          "sports ball",
+          "tennis racket"
+        ],
+        "predicted": [
+          "tennis racket"
+        ],
+        "raw_answer": "tennis racket, tennis player, blue shirt, white shorts, white socks, blue shoes, blue court, white letters on court",
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.9661,
+        "matches": [
+          {
+            "category": "tennis racket",
+            "matched_text": "tennis racket",
+            "segment": "tennis racket"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person",
+          "sports ball"
+        ]
+      },
+      {
+        "image": "000000167067.jpg",
+        "ground_truth": [
+          "person",
+          "tie"
+        ],
+        "predicted": [],
+        "raw_answer": "bowtie, jacket, shirt, wall, ceiling vent",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "latency": 0.4852,
+        "matches": [],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "person",
+          "tie"
+        ]
+      },
+      {
+        "image": "000000091654.jpg",
+        "ground_truth": [
+          "bowl",
+          "dining table",
+          "spoon"
+        ],
+        "predicted": [
+          "bowl",
+          "spoon"
+        ],
+        "raw_answer": "chopsticks, bowl, spoon, noodles, green onions, meat chunks",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.6539,
+        "matches": [
+          {
+            "category": "bowl",
+            "matched_text": "bowl",
+            "segment": "bowl"
+          },
+          {
+            "category": "spoon",
+            "matched_text": "spoon",
+            "segment": "spoon"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "dining table"
+        ]
+      },
+      {
+        "image": "000000031735.jpg",
+        "ground_truth": [
+          "book",
+          "couch",
+          "potted plant"
+        ],
+        "predicted": [
+          "chair",
+          "couch",
+          "vase"
+        ],
+        "raw_answer": "couch, coffee table, lamp, side table, window, curtain, sofa, rug, chair, painting, plant, vase, candle holder",
+        "tp": 1,
+        "fp": 2,
+        "fn": 2,
+        "latency": 1.0625,
+        "matches": [
+          {
+            "category": "couch",
+            "matched_text": "couch",
+            "segment": "couch"
+          },
+          {
+            "category": "couch",
+            "matched_text": "sofa",
+            "segment": "sofa"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "chair"
+          },
+          {
+            "category": "vase",
+            "matched_text": "vase",
+            "segment": "vase"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "chair",
+          "vase"
+        ],
+        "false_negatives": [
+          "book",
+          "potted plant"
+        ]
+      },
+      {
+        "image": "000000387916.jpg",
+        "ground_truth": [
+          "person",
+          "skis",
+          "snowboard"
+        ],
+        "predicted": [
+          "backpack",
+          "person",
+          "skis",
+          "snowboard"
+        ],
+        "raw_answer": "skis, snowboard, skiers, snow-covered mountain, ski lift, ski poles, backpacks, winter clothing, ski boots, ski goggles, ski helmets, ski poles, ski boots, ski goggles, ski helmets, ski poles, ski boots, ski goggles, ski helmets, ski poles, ski boots, ski goggles, ski helmets, ski poles, ski boots, ski goggles, ski helmets, ski poles, ski boots, ski goggles, ski helmets, ski poles, ski boots,",
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "latency": 3.1404,
+        "matches": [
+          {
+            "category": "skis",
+            "matched_text": "skis",
+            "segment": "skis"
+          },
+          {
+            "category": "snowboard",
+            "matched_text": "snowboard",
+            "segment": "snowboard"
+          },
+          {
+            "category": "person",
+            "matched_text": "skiers",
+            "segment": "skiers"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "backpack",
+            "matched_text": "backpacks",
+            "segment": "backpacks"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski goggles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski helmets"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski poles"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boots"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "backpack"
+        ],
+        "false_negatives": []
+      },
+      {
+        "image": "000000155451.jpg",
+        "ground_truth": [
+          "car",
+          "traffic light"
+        ],
+        "predicted": [],
+        "raw_answer": "交通燈, 街燈, 鐵塔, 樹木, 建築物, 燈柱, 路燈, 道路, 電線杆, 電線，天空",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "latency": 1.7236,
+        "matches": [],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "car",
+          "traffic light"
+        ]
+      },
+      {
+        "image": "000000257370.jpg",
+        "ground_truth": [
+          "person",
+          "potted plant",
+          "remote",
+          "tv"
+        ],
+        "predicted": [
+          "keyboard",
+          "mouse",
+          "person",
+          "tv",
+          "vase"
+        ],
+        "raw_answer": "電視, 音箱, 電腦鍵盤, 電腦鼠標, 電話, 桌子, 玩具人偶, 花瓶, 花卉, 遊戲控制器, 手錶, 衣服, 鞋子, 墙壁, 地板, 窗戶, 照明設備, 電源插座, 電源線, �",
+        "tp": 2,
+        "fp": 3,
+        "fn": 2,
+        "latency": 3.1709,
+        "matches": [
+          {
+            "category": "tv",
+            "matched_text": "電視",
+            "segment": "電視"
+          },
+          {
+            "category": "keyboard",
+            "matched_text": "鍵盤",
+            "segment": "電腦鍵盤"
+          },
+          {
+            "category": "mouse",
+            "matched_text": "鼠標",
+            "segment": "電腦鼠標"
+          },
+          {
+            "category": "person",
+            "matched_text": "人",
+            "segment": "玩具人偶"
+          },
+          {
+            "category": "vase",
+            "matched_text": "花瓶",
+            "segment": "花瓶"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "keyboard",
+          "mouse",
+          "vase"
+        ],
+        "false_negatives": [
+          "potted plant",
+          "remote"
+        ]
+      },
+      {
+        "image": "000000170893.jpg",
+        "ground_truth": [
+          "dog",
+          "toilet"
+        ],
+        "predicted": [
+          "dog"
+        ],
+        "raw_answer": "狗, 箱子, 墙壁, 浴室",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "latency": 0.652,
+        "matches": [
+          {
+            "category": "dog",
+            "matched_text": "狗",
+            "segment": "狗"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [],
+        "false_negatives": [
+          "toilet"
+        ]
+      },
+      {
+        "image": "000000515577.jpg",
+        "ground_truth": [
+          "person",
+          "skis"
+        ],
+        "predicted": [
+          "chair",
+          "person",
+          "skis"
+        ],
+        "raw_answer": "ski, skier, snow, ski pole, ski boot, ski lift, ski lift chair, ski lift tower, ski lift rope, ski lift cable, ski lift station, ski lift ticket counter, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine, ski lift ticket machine",
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "latency": 3.1019,
+        "matches": [
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski"
+          },
+          {
+            "category": "person",
+            "matched_text": "skier",
+            "segment": "skier"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski pole"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski boot"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift"
+          },
+          {
+            "category": "chair",
+            "matched_text": "chair",
+            "segment": "ski lift chair"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift chair"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift tower"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift rope"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift cable"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift station"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket counter"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          },
+          {
+            "category": "skis",
+            "matched_text": "ski",
+            "segment": "ski lift ticket machine"
+          }
+        ],
+        "review_segments": [],
+        "false_positives": [
+          "chair"
+        ],
+        "false_negatives": []
+      }
+    ]
+  },
+  "scoring_version": "coco-alias-v1",
+  "scoring_note": "Micro category-set scores against COCO annotations. Unmatched categories require visual review; not verified hallucinations. Timing and memory are retained from original inference."
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "model": "Qwen2.5-VL-3B",
+    "total_questions": 20,
+    "accuracy_evaluated_questions": 16,
+    "correct": 12,
+    "overall_accuracy": 0.75,
+    "category_accuracy": {
+      "image_classification": 0.75,
+      "object_recognition": 0.75,
+      "visual_question_answering": 0.75,
+      "attribute_spatial": 0.75,
+      "image_captioning": null
+    },
+    "object_recognition": {
+      "matched_objects": 6,
+      "required_objects": 7,
+      "object_recall": 0.8571428571428571
+    },
+    "average_latency_seconds": 0.44029999999999997,
+    "average_peak_gpu_memory_gb": 7.032500000000001,
+    "maximum_peak_gpu_memory_gb": 7.033
+  },
+  {
+    "model": "SmolVLM2-2.2B",
+    "total_questions": 20,
+    "accuracy_evaluated_questions": 16,
+    "correct": 4,
+    "overall_accuracy": 0.25,
+    "category_accuracy": {
+      "image_classification": 0.5,
+      "object_recognition": 0.0,
+      "visual_question_answering": 0.25,
+      "attribute_spatial": 0.25,
+      "image_captioning": null
+    },
+    "object_recognition": {
+      "matched_objects": 2,
+      "required_objects": 7,
+      "object_recall": 0.2857142857142857
+    },
+    "average_latency_seconds": 0.7813,
+    "average_peak_gpu_memory_gb": 4.6062,
+    "maximum_peak_gpu_memory_gb": 4.611
+  }
+]

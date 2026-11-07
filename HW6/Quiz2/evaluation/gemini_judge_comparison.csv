@@ -1,0 +1,13 @@
+﻿model,category,num_questions,avg_correctness,avg_visual_grounding,avg_completeness,avg_overall
+Qwen2.5-VL-3B,ALL,20,4.25,4.25,4.4,4.2
+SmolVLM2-2.2B,ALL,20,3.05,3.2,3.05,3.05
+Qwen2.5-VL-3B,image_classification,4,4.75,5.0,4.75,4.75
+SmolVLM2-2.2B,image_classification,4,3.0,3.0,3.0,3.0
+Qwen2.5-VL-3B,object_recognition,4,4.25,4.25,4.25,4.25
+SmolVLM2-2.2B,object_recognition,4,1.75,2.0,1.75,1.75
+Qwen2.5-VL-3B,visual_question_answering,4,3.5,3.5,3.5,3.5
+SmolVLM2-2.2B,visual_question_answering,4,3.25,3.75,3.25,3.25
+Qwen2.5-VL-3B,image_captioning,4,3.75,3.5,4.5,3.5
+SmolVLM2-2.2B,image_captioning,4,4.25,4.25,4.25,4.25
+Qwen2.5-VL-3B,attribute_spatial,4,5.0,5.0,5.0,5.0
+SmolVLM2-2.2B,attribute_spatial,4,3.0,3.0,3.0,3.0

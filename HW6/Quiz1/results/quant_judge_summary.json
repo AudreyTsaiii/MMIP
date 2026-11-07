@@ -1,0 +1,57 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "num_questions": 20,
+  "scores": {
+    "FP16": {
+      "correctness": 4.2,
+      "completeness": 3.95,
+      "instruction_following": 3.7,
+      "overall": 3.8
+    },
+    "INT8": {
+      "correctness": 3.95,
+      "completeness": 3.7,
+      "instruction_following": 3.65,
+      "overall": 3.6
+    },
+    "INT4": {
+      "correctness": 4.05,
+      "completeness": 3.75,
+      "instruction_following": 3.45,
+      "overall": 3.5
+    }
+  },
+  "wins": {
+    "FP16": 5,
+    "INT8": 2,
+    "INT4": 4,
+    "Tie": 9
+  },
+  "category_scores": {
+    "instruction_following": {
+      "FP16": 4.5,
+      "INT8": 4.5,
+      "INT4": 3.75
+    },
+    "knowledge": {
+      "FP16": 4.25,
+      "INT8": 3.75,
+      "INT4": 3.5
+    },
+    "problem_solving": {
+      "FP16": 2.5,
+      "INT8": 2.5,
+      "INT4": 2.5
+    },
+    "reasoning": {
+      "FP16": 3.0,
+      "INT8": 2.5,
+      "INT4": 3.25
+    },
+    "summarization": {
+      "FP16": 4.75,
+      "INT8": 4.75,
+      "INT4": 4.5
+    }
+  }
+}

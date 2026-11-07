@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "precision": "FP16",
+  "decoding": "Greedy Decoding",
+  "max_new_tokens": 384,
+  "num_questions": 20,
+  "model_load_time_seconds": 3.0015,
+  "model_memory_after_loading_gb": 3.2058,
+  "average_latency_seconds": 2.8677,
+  "total_generation_time_seconds": 57.3536,
+  "average_sampled_gpu_memory_gb": 3.2428,
+  "peak_gpu_memory_gb": 3.2691,
+  "memory_sampling_interval_seconds": 0.05,
+  "memory_measurement": "PyTorch allocated GPU memory"
+}

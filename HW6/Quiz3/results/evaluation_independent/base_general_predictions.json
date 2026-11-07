@@ -1,0 +1,802 @@
+[
+  {
+    "id": "general-001",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A. 12",
+    "correct": false
+  },
+  {
+    "id": "general-002",
+    "category": "logic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-003",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 藍色",
+    "correct": true
+  },
+  {
+    "id": "general-004",
+    "category": "language",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C",
+    "correct": true
+  },
+  {
+    "id": "general-005",
+    "category": "sequence",
+    "expected": "C",
+    "predicted": "B",
+    "response": "B. 81",
+    "correct": false
+  },
+  {
+    "id": "general-006",
+    "category": "arithmetic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A. 21",
+    "correct": false
+  },
+  {
+    "id": "general-007",
+    "category": "reading",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 綠色",
+    "correct": true
+  },
+  {
+    "id": "general-008",
+    "category": "language",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 安靜",
+    "correct": true
+  },
+  {
+    "id": "general-009",
+    "category": "sequence",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-010",
+    "category": "arithmetic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A. 59",
+    "correct": false
+  },
+  {
+    "id": "general-011",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D.",
+    "correct": false
+  },
+  {
+    "id": "general-012",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-013",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-014",
+    "category": "sequence",
+    "expected": "D",
+    "predicted": "B",
+    "response": "B",
+    "correct": false
+  },
+  {
+    "id": "general-015",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A. 39",
+    "correct": false
+  },
+  {
+    "id": "general-016",
+    "category": "logic",
+    "expected": "B",
+    "predicted": "D",
+    "response": "D.",
+    "correct": false
+  },
+  {
+    "id": "general-017",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-018",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-019",
+    "category": "sequence",
+    "expected": "A",
+    "predicted": "C",
+    "response": "C. 206",
+    "correct": false
+  },
+  {
+    "id": "general-020",
+    "category": "arithmetic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A. 75",
+    "correct": false
+  },
+  {
+    "id": "general-021",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D. 小華",
+    "correct": false
+  },
+  {
+    "id": "general-022",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 紫色",
+    "correct": true
+  },
+  {
+    "id": "general-023",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-024",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B. 161",
+    "correct": true
+  },
+  {
+    "id": "general-025",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 1",
+    "correct": true
+  },
+  {
+    "id": "general-026",
+    "category": "logic",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 小華",
+    "correct": true
+  },
+  {
+    "id": "general-027",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 綠色",
+    "correct": true
+  },
+  {
+    "id": "general-028",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-029",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B. 237",
+    "correct": true
+  },
+  {
+    "id": "general-030",
+    "category": "arithmetic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A. 98",
+    "correct": false
+  },
+  {
+    "id": "general-031",
+    "category": "logic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-032",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 綠色",
+    "correct": true
+  },
+  {
+    "id": "general-033",
+    "category": "language",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 安靜",
+    "correct": true
+  },
+  {
+    "id": "general-034",
+    "category": "sequence",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-035",
+    "category": "arithmetic",
+    "expected": "A",
+    "predicted": "C",
+    "response": "C. 50",
+    "correct": false
+  },
+  {
+    "id": "general-036",
+    "category": "logic",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 小文",
+    "correct": true
+  },
+  {
+    "id": "general-037",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 紫色",
+    "correct": true
+  },
+  {
+    "id": "general-038",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-039",
+    "category": "sequence",
+    "expected": "D",
+    "predicted": "C",
+    "response": "C. 209",
+    "correct": false
+  },
+  {
+    "id": "general-040",
+    "category": "arithmetic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A. 31",
+    "correct": false
+  },
+  {
+    "id": "general-041",
+    "category": "logic",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 小明",
+    "correct": true
+  },
+  {
+    "id": "general-042",
+    "category": "reading",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 紫色",
+    "correct": true
+  },
+  {
+    "id": "general-043",
+    "category": "language",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 明亮",
+    "correct": true
+  },
+  {
+    "id": "general-044",
+    "category": "sequence",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-045",
+    "category": "arithmetic",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A. 53",
+    "correct": true
+  },
+  {
+    "id": "general-046",
+    "category": "logic",
+    "expected": "B",
+    "predicted": "D",
+    "response": "D. 小華",
+    "correct": false
+  },
+  {
+    "id": "general-047",
+    "category": "reading",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-048",
+    "category": "language",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 整齊",
+    "correct": true
+  },
+  {
+    "id": "general-049",
+    "category": "sequence",
+    "expected": "D",
+    "predicted": "B",
+    "response": "B. 138",
+    "correct": false
+  },
+  {
+    "id": "general-050",
+    "category": "arithmetic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A. 65",
+    "correct": false
+  },
+  {
+    "id": "general-051",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-052",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-053",
+    "category": "sequence",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-054",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A. 30",
+    "correct": false
+  },
+  {
+    "id": "general-055",
+    "category": "logic",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 小華",
+    "correct": true
+  },
+  {
+    "id": "general-056",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-057",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A. 51",
+    "correct": false
+  },
+  {
+    "id": "general-058",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-059",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-060",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-061",
+    "category": "arithmetic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A. 83",
+    "correct": false
+  },
+  {
+    "id": "general-062",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D. 小明",
+    "correct": false
+  },
+  {
+    "id": "general-063",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-064",
+    "category": "sequence",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-065",
+    "category": "arithmetic",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A. 52",
+    "correct": true
+  },
+  {
+    "id": "general-066",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D. 小明",
+    "correct": false
+  },
+  {
+    "id": "general-067",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-068",
+    "category": "arithmetic",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A. 87",
+    "correct": true
+  },
+  {
+    "id": "general-069",
+    "category": "reading",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 綠色",
+    "correct": true
+  },
+  {
+    "id": "general-070",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-071",
+    "category": "arithmetic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A. 145",
+    "correct": false
+  },
+  {
+    "id": "general-072",
+    "category": "logic",
+    "expected": "B",
+    "predicted": "D",
+    "response": "D. 小安",
+    "correct": false
+  },
+  {
+    "id": "general-073",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-074",
+    "category": "language",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 明亮",
+    "correct": true
+  },
+  {
+    "id": "general-075",
+    "category": "sequence",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-076",
+    "category": "arithmetic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A. 87",
+    "correct": false
+  },
+  {
+    "id": "general-077",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "C",
+    "response": "C. 小安",
+    "correct": false
+  },
+  {
+    "id": "general-078",
+    "category": "reading",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 藍色",
+    "correct": true
+  },
+  {
+    "id": "general-079",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-080",
+    "category": "sequence",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-081",
+    "category": "arithmetic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A. 133",
+    "correct": false
+  },
+  {
+    "id": "general-082",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D. 小明",
+    "correct": false
+  },
+  {
+    "id": "general-083",
+    "category": "reading",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-084",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-085",
+    "category": "sequence",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-086",
+    "category": "arithmetic",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A. 98",
+    "correct": false
+  },
+  {
+    "id": "general-087",
+    "category": "reading",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-088",
+    "category": "sequence",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-089",
+    "category": "logic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-090",
+    "category": "logic",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 小明",
+    "correct": true
+  },
+  {
+    "id": "general-091",
+    "category": "language",
+    "expected": "D",
+    "predicted": "D",
+    "response": "D. 熱鬧",
+    "correct": true
+  },
+  {
+    "id": "general-092",
+    "category": "logic",
+    "expected": "A",
+    "predicted": "D",
+    "response": "D. 小美",
+    "correct": false
+  },
+  {
+    "id": "general-093",
+    "category": "reading",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C",
+    "correct": true
+  },
+  {
+    "id": "general-094",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  },
+  {
+    "id": "general-095",
+    "category": "reading",
+    "expected": "C",
+    "predicted": "C",
+    "response": "C. 綠色",
+    "correct": true
+  },
+  {
+    "id": "general-096",
+    "category": "logic",
+    "expected": "C",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-097",
+    "category": "logic",
+    "expected": "B",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-098",
+    "category": "language",
+    "expected": "D",
+    "predicted": "A",
+    "response": "A",
+    "correct": false
+  },
+  {
+    "id": "general-099",
+    "category": "language",
+    "expected": "A",
+    "predicted": "A",
+    "response": "A",
+    "correct": true
+  },
+  {
+    "id": "general-100",
+    "category": "language",
+    "expected": "B",
+    "predicted": "B",
+    "response": "B",
+    "correct": true
+  }
+]

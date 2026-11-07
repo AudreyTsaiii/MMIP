@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "precision": "INT4",
+  "quantization": "4-bit NF4 with double quantization",
+  "prompt_strategy": "Baseline Prompt",
+  "decoding": "Greedy Decoding",
+  "enable_thinking": false,
+  "max_new_tokens": 384,
+  "num_questions": 20,
+  "model_load_time_seconds": 3.67775821685791,
+  "model_memory_after_loading_gb": 1.2572875022888184,
+  "average_latency_seconds": 3.8384156107902525,
+  "total_generation_time_seconds": 76.76831221580505,
+  "average_sampled_gpu_memory_gb": 1.2898183373233556,
+  "peak_gpu_memory_gb": 1.3206143379211426,
+  "memory_sampling_interval_seconds": 0.05,
+  "memory_measurement": "PyTorch allocated GPU memory"
+}

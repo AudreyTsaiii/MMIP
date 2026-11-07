@@ -1,0 +1,199 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-Hant">
+    <head>
+    <meta charset="UTF-8">
+    <title>VLM Benchmark Review</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; }
+        .item { border: 1px solid #ccc; padding: 16px;
+                margin-bottom: 24px; border-radius: 8px; }
+        img { max-width: 480px; max-height: 360px;
+              display: block; margin: 12px 0; }
+        .answer { color: #176b37; }
+    </style>
+    </head>
+    <body>
+    <h1>VLM Benchmark Ground Truth Review</h1>
+    
+
+    <div class="item">
+        <h2>Question 1 - image_classification</h2>
+        <img src="images/coco_000000558213.jpg" alt="Question 1">
+        <p><b>Prompt:</b> 請判斷這張照片主要呈現什麼活動場景？</p>
+        <p class="answer"><b>Ground Truth:</b> "滑板運動場景"</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 2 - image_classification</h2>
+        <img src="images/coco_000000357816.jpg" alt="Question 2">
+        <p><b>Prompt:</b> 請判斷圖片中的人物正在參與哪一種運動？請只回答運動名稱。</p>
+        <p class="answer"><b>Ground Truth:</b> ["棒球"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 3 - image_classification</h2>
+        <img src="images/coco_000000159977.jpg" alt="Question 3">
+        <p><b>Prompt:</b> 請判斷這張圖片主要呈現哪一種場景？請只回答場景類型。</p>
+        <p class="answer"><b>Ground Truth:</b> ["野生動物與草原場景", "野生動物場景"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 4 - image_classification</h2>
+        <img src="images/coco_000000033114.jpg" alt="Question 4">
+        <p><b>Prompt:</b> 請判斷圖片中的主要交通工具是什麼？請只回答交通工具名稱。</p>
+        <p class="answer"><b>Ground Truth:</b> ["飛機"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 5 - object_recognition</h2>
+        <img src="images/coco_000000435208.jpg" alt="Question 5">
+        <p><b>Prompt:</b> 請列出圖片中可以清楚辨識的主要家具。</p>
+        <p class="answer"><b>Ground Truth:</b> ["沙發", "桌子"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 6 - object_recognition</h2>
+        <img src="images/coco_000000231831.jpg" alt="Question 6">
+        <p><b>Prompt:</b> 請列出圖片中最明顯的三種物件。</p>
+        <p class="answer"><b>Ground Truth:</b> ["貓", "桌子", "書本"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 7 - object_recognition</h2>
+        <img src="images/coco_000000257169.jpg" alt="Question 7">
+        <p><b>Prompt:</b> 照片中人物手持的主要物品是什麼？</p>
+        <p class="answer"><b>Ground Truth:</b> "吹風機"</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 8 - object_recognition</h2>
+        <img src="images/coco_000000369757.jpg" alt="Question 8">
+        <p><b>Prompt:</b> 請辨識展示櫃中最主要的食物種類。</p>
+        <p class="answer"><b>Ground Truth:</b> ["披薩"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 9 - visual_question_answering</h2>
+        <img src="images/coco_000000261888.jpg" alt="Question 9">
+        <p><b>Prompt:</b> 圖片中腳踏車騎士附近有幾匹馬？</p>
+        <p class="answer"><b>Ground Truth:</b> ["2", "兩匹", "兩隻"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 10 - visual_question_answering</h2>
+        <img src="images/coco_000000202339.jpg" alt="Question 10">
+        <p><b>Prompt:</b> 男子旁邊停放的是哪一種大型交通工具？</p>
+        <p class="answer"><b>Ground Truth:</b> ["公車", "巴士"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 11 - visual_question_answering</h2>
+        <img src="images/coco_000000092091.jpg" alt="Question 11">
+        <p><b>Prompt:</b> 小女孩手中拿著什麼玩具？</p>
+        <p class="answer"><b>Ground Truth:</b> ["泰迪熊", "絨毛熊", "玩偶熊"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 12 - visual_question_answering</h2>
+        <img src="images/coco_000000428454.jpg" alt="Question 12">
+        <p><b>Prompt:</b> 圖片中的男子腳下踩著什麼運動器材？</p>
+        <p class="answer"><b>Ground Truth:</b> ["滑雪板", "Snowboard"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 13 - image_captioning</h2>
+        <img src="images/coco_000000416885.jpg" alt="Question 13">
+        <p><b>Prompt:</b> Describe the main objects and scene in this image in one or two English sentences.</p>
+        <p class="answer"><b>Ground Truth:</b> ["Three pastry desserts and two glasses of wine are on a table.", "Two plates, one paired up with red wine and one paired up with white wine.", "a grilled panini sits next to a glass of wine on a table", "Several desserts on white plates near a glass of wine.", "multiple plates of food on a wooden table"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 14 - image_captioning</h2>
+        <img src="images/coco_000000193162.jpg" alt="Question 14">
+        <p><b>Prompt:</b> Describe the main objects, actions, and surroundings in this image in one or two English sentences.</p>
+        <p class="answer"><b>Ground Truth:</b> ["a man on a three wheeler following behind a two dogs and a cow", "A black and white cow walking across a lush green field.", "A man is right behind a cow on green grass.", "A man on a vehicle in a field and a few animals.", "a cow walks as a man on a quad follows it"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 15 - image_captioning</h2>
+        <img src="images/coco_000000073946.jpg" alt="Question 15">
+        <p><b>Prompt:</b> Describe the people, objects, and their actions in this image in one or two English sentences.</p>
+        <p class="answer"><b>Ground Truth:</b> ["A couple of men standing on either side of a surfboard.", "some men are looking at a design of a shark", "Two men fake biting a surfboard for a picture.", "Two men biting a surfboard with a shark on it.", "TWO MEN IMITATING A SHARK PICTURE ON A SURFBOARD"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 16 - image_captioning</h2>
+        <img src="images/coco_000000088432.jpg" alt="Question 16">
+        <p><b>Prompt:</b> Describe the main scene and visible vehicles in this image in one or two English sentences.</p>
+        <p class="answer"><b>Ground Truth:</b> ["Some street signs near a road with a truck.", "The street corner of a busy intersection in a town.", "A road between the buildings where a big car is parked.A water hydrant is also seen.", "A vehicle crosses an intersection near a building and a bus stop", "Truck driving through the intersection of Biltmore and Short Coxe Ave."]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 17 - attribute_spatial</h2>
+        <img src="images/coco_000000496954.jpg" alt="Question 17">
+        <p><b>Prompt:</b> 圖片中的蛋糕是放在哪一種顏色的盤子上？</p>
+        <p class="answer"><b>Ground Truth:</b> ["白色"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 18 - attribute_spatial</h2>
+        <img src="images/coco_000000482719.jpg" alt="Question 18">
+        <p><b>Prompt:</b> 圖片中的水果碗裡，哪一種黃色水果最明顯？</p>
+        <p class="answer"><b>Ground Truth:</b> ["香蕉"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 19 - attribute_spatial</h2>
+        <img src="images/coco_000000034257.jpg" alt="Question 19">
+        <p><b>Prompt:</b> 圖片中胡蘿蔔的主要顏色是什麼？</p>
+        <p class="answer"><b>Ground Truth:</b> ["橘色", "橙色"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+
+    <div class="item">
+        <h2>Question 20 - attribute_spatial</h2>
+        <img src="images/coco_000000565776.jpg" alt="Question 20">
+        <p><b>Prompt:</b> 圖片中央的廚房中島主要呈現什麼顏色？</p>
+        <p class="answer"><b>Ground Truth:</b> ["白色"]</p>
+        <p><b>Verified:</b> False</p>
+    </div>
+    
+</body></html>

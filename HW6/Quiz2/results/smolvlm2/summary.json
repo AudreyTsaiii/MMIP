@@ -1,0 +1,6 @@
+{
+  "model": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+  "loading_time_seconds": 6.857,
+  "num_questions": 20,
+  "average_latency_seconds": 0.781
+}

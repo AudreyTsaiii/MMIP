@@ -1,0 +1,57 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "num_questions": 20,
+  "baseline": {
+    "correctness": 4.25,
+    "completeness": 3.95,
+    "instruction_following": 3.8,
+    "overall": 3.9
+  },
+  "cot": {
+    "correctness": 4.4,
+    "completeness": 4.35,
+    "instruction_following": 4.2,
+    "overall": 4.15
+  },
+  "comparison": {
+    "correctness": {
+      "difference_cot_minus_baseline": 0.15
+    },
+    "completeness": {
+      "difference_cot_minus_baseline": 0.4
+    },
+    "instruction_following": {
+      "difference_cot_minus_baseline": 0.4
+    },
+    "overall": {
+      "difference_cot_minus_baseline": 0.25
+    }
+  },
+  "wins": {
+    "baseline": 1,
+    "cot": 6,
+    "tie": 13
+  },
+  "category_scores": {
+    "instruction_following": {
+      "baseline": 4.75,
+      "cot": 4.25
+    },
+    "knowledge": {
+      "baseline": 4.25,
+      "cot": 4.75
+    },
+    "problem_solving": {
+      "baseline": 2.5,
+      "cot": 2.75
+    },
+    "reasoning": {
+      "baseline": 3.25,
+      "cot": 4.25
+    },
+    "summarization": {
+      "baseline": 4.75,
+      "cot": 4.75
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "base": {
+    "general": {
+      "accuracy": 0.54,
+      "correct": 54,
+      "total": 100,
+      "category_accuracy": {
+        "arithmetic": 0.2,
+        "logic": 0.25,
+        "reading": 1.0,
+        "language": 0.95,
+        "sequence": 0.3
+      }
+    },
+    "target": {
+      "status": "pending_review",
+      "total": 20
+    }
+  },
+  "dpo": {
+    "general": {
+      "accuracy": 0.54,
+      "correct": 54,
+      "total": 100,
+      "category_accuracy": {
+        "arithmetic": 0.2,
+        "logic": 0.25,
+        "reading": 1.0,
+        "language": 0.95,
+        "sequence": 0.3
+      }
+    },
+    "target": {
+      "status": "pending_review",
+      "total": 20
+    }
+  }
+}

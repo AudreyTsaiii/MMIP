@@ -1,0 +1,65 @@
+﻿model,id,category,image,prompt,ground_truth,reference_captions,answer,matched_targets,matched_count,target_count,object_recall,auto_correct,evaluation_note,latency_seconds,peak_gpu_memory_gb
+Qwen2.5-VL-3B,1,image_classification,images/coco_000000558213.jpg,請判斷這張照片主要呈現什麼活動場景？,"""滑板運動場景""",[],這張照片主要呈現的是滑板運動的場景。可以看到一個人正在滑板，並且在一個有圍欄的空地上進行滑板活動。,"[""滑板運動場景""]",1,1,1.0,1,符合可接受答案,0.973,7.023
+Qwen2.5-VL-3B,2,image_classification,images/coco_000000357816.jpg,請判斷圖片中的人物正在參與哪一種運動？請只回答運動名稱。,"[""棒球""]",[],棒球,"[""棒球""]",1,1,1.0,1,符合可接受答案,0.095,7.033
+Qwen2.5-VL-3B,3,image_classification,images/coco_000000159977.jpg,請判斷這張圖片主要呈現哪一種場景？請只回答場景類型。,"[""野生動物與草原場景"", ""野生動物場景""]",[],草原,[],0,2,0.0,0,未匹配可接受答案,0.068,7.033
+Qwen2.5-VL-3B,4,image_classification,images/coco_000000033114.jpg,請判斷圖片中的主要交通工具是什麼？請只回答交通工具名稱。,"[""飛機""]",[],飛機,"[""飛機""]",1,1,1.0,1,符合可接受答案,0.085,7.033
+Qwen2.5-VL-3B,5,object_recognition,images/coco_000000435208.jpg,請列出圖片中可以清楚辨識的主要家具。,"[""沙發"", ""桌子""]",[],"在图片中，可以清楚辨识到的主要家具包括：
+
+1. 一张白色的咖啡桌。
+2. 一把红色的椅子。
+3. 一个黑色的电脑桌。
+4. 一个灰色的沙发。
+
+这些家具构成了房间的主要布局和功能区域。","[""沙發"", ""桌子""]",2,2,1.0,1,辨識到 2/2 個指定物件,0.84,7.033
+Qwen2.5-VL-3B,6,object_recognition,images/coco_000000231831.jpg,請列出圖片中最明顯的三種物件。,"[""貓"", ""桌子"", ""書本""]",[],"1. 猫
+2. 书桌
+3. 笔记本","[""貓"", ""桌子""]",2,3,0.6667,0,辨識到 2/3 個指定物件,0.325,7.033
+Qwen2.5-VL-3B,7,object_recognition,images/coco_000000257169.jpg,照片中人物手持的主要物品是什麼？,"""吹風機""",[],照片中人物手持的主要物品是一把黑色的吹风机。,"[""吹風機""]",1,1,1.0,1,辨識到 1/1 個指定物件,0.239,7.033
+Qwen2.5-VL-3B,8,object_recognition,images/coco_000000369757.jpg,請辨識展示櫃中最主要的食物種類。,"[""披薩""]",[],展示櫃中最主要的食物種類是披薩。,"[""披薩""]",1,1,1.0,1,辨識到 1/1 個指定物件,0.211,7.033
+Qwen2.5-VL-3B,9,visual_question_answering,images/coco_000000261888.jpg,圖片中腳踏車騎士附近有幾匹馬？,"[""2"", ""兩匹"", ""兩隻""]",[],在圖片中，腳踏車騎士附近沒有馬。腳踏車騎士正在一條單線道路上騎行，而馬則在遠處的道路上。,[],0,3,0.0,0,未匹配可接受答案,0.543,7.033
+Qwen2.5-VL-3B,10,visual_question_answering,images/coco_000000202339.jpg,男子旁邊停放的是哪一種大型交通工具？,"[""公車"", ""巴士""]",[],在男子旁边停放的是一种大型交通工具，看起来像是一辆巴士。,"[""公車"", ""巴士""]",2,2,1.0,1,符合可接受答案,0.267,7.033
+Qwen2.5-VL-3B,11,visual_question_answering,images/coco_000000092091.jpg,小女孩手中拿著什麼玩具？,"[""泰迪熊"", ""絨毛熊"", ""玩偶熊""]",[],小女孩手中拿着一个泰迪熊。,"[""泰迪熊""]",1,3,0.3333,1,符合可接受答案,0.173,7.033
+Qwen2.5-VL-3B,12,visual_question_answering,images/coco_000000428454.jpg,圖片中的男子腳下踩著什麼運動器材？,"[""滑雪板"", ""Snowboard""]",[],圖片中的男子腳下踩著滑雪板。,"[""滑雪板""]",1,2,0.5,1,符合可接受答案,0.197,7.033
+Qwen2.5-VL-3B,13,image_captioning,images/coco_000000416885.jpg,Describe the main objects and scene in this image in one or two English sentences.,"""""","[""Three pastry desserts and two glasses of wine are on a table."", ""Two plates, one paired up with red wine and one paired up with white wine."", ""a grilled panini sits next to a glass of wine on a table"", ""Several desserts on white plates near a glass of wine."", ""multiple plates of food on a wooden table""]","The image shows a dining table with a glass of red wine, a plate with a dessert, and another plate with a slice of pie. The background is blurred, suggesting a busy street or restaurant setting.",[],0,0,,,使用 Caption 評估指標另行評估,0.631,7.033
+Qwen2.5-VL-3B,14,image_captioning,images/coco_000000193162.jpg,"Describe the main objects, actions, and surroundings in this image in one or two English sentences.","""""","[""a man on a three wheeler following behind a two dogs and a cow"", ""A black and white cow walking across a lush green field."", ""A man is right behind a cow on green grass."", ""A man on a vehicle in a field and a few animals."", ""a cow walks as a man on a quad follows it""]","In the image, a man is operating a red four-wheeler in a muddy field, with a black and white cow following him. A black and white dog is also present, walking alongside the cow. The scene is set in a rural area with green fields and a fence in the background.",[],0,0,,,使用 Caption 評估指標另行評估,0.899,7.033
+Qwen2.5-VL-3B,15,image_captioning,images/coco_000000073946.jpg,"Describe the people, objects, and their actions in this image in one or two English sentences.","""""","[""A couple of men standing on either side of a surfboard."", ""some men are looking at a design of a shark"", ""Two men fake biting a surfboard for a picture."", ""Two men biting a surfboard with a shark on it."", ""TWO MEN IMITATING A SHARK PICTURE ON A SURFBOARD""]","In the image, two men are holding a surfboard with a shark design on it. One man is wearing purple shorts and the other is shirtless, while the third man is wearing a white tank top. They appear to be in a room with a bed in the background.",[],0,0,,,使用 Caption 評估指標另行評估,0.842,7.033
+Qwen2.5-VL-3B,16,image_captioning,images/coco_000000088432.jpg,Describe the main scene and visible vehicles in this image in one or two English sentences.,"""""","[""Some street signs near a road with a truck."", ""The street corner of a busy intersection in a town."", ""A road between the buildings where a big car is parked.A water hydrant is also seen."", ""A vehicle crosses an intersection near a building and a bus stop"", ""Truck driving through the intersection of Biltmore and Short Coxe Ave.""]","The image shows a street corner with a yellow fire hydrant, a white pickup truck parked on the side of the road, and a sign indicating ""No Parking"" and ""No Stopping."" The street signs indicate ""Baltimore Ave"" and ""Short Cooke St.""",[],0,0,,,使用 Caption 評估指標另行評估,0.842,7.033
+Qwen2.5-VL-3B,17,attribute_spatial,images/coco_000000496954.jpg,圖片中的蛋糕是放在哪一種顏色的盤子上？,"[""白色""]",[],在圖片中，蛋糕被放在白色的盤子上。,"[""白色""]",1,1,1.0,1,符合可接受答案,0.225,7.033
+Qwen2.5-VL-3B,18,attribute_spatial,images/coco_000000482719.jpg,圖片中的水果碗裡，哪一種黃色水果最明顯？,"[""香蕉""]",[],在圖片中，有一個果盤，裡面有香蕉和蘋果。其中，香蕉是最顯眼的黃色水果。它們被放在果盤的中央位置，並且與其他水果相比，它的顏色和形狀都比較突出。,"[""香蕉""]",1,1,1.0,1,符合可接受答案,0.814,7.033
+Qwen2.5-VL-3B,19,attribute_spatial,images/coco_000000034257.jpg,圖片中胡蘿蔔的主要顏色是什麼？,"[""橘色"", ""橙色""]",[],在這張圖片中，胡蘿蔔的主要顏色是橙色。,"[""橘色"", ""橙色""]",2,2,1.0,1,符合可接受答案,0.301,7.033
+Qwen2.5-VL-3B,20,attribute_spatial,images/coco_000000565776.jpg,圖片中央的廚房中島主要呈現什麼顏色？,"[""白色""]",[],圖片中央的廚房中島主要呈現粉紅色。,[],0,1,0.0,0,未匹配可接受答案,0.236,7.033
+SmolVLM2-2.2B,1,image_classification,images/coco_000000558213.jpg,請判斷這張照片主要呈現什麼活動場景？,"""滑板運動場景""",[],這張照片主要呈現一個游泳池的景象，其中一個人在游泳池中擺出來，並且在游泳池中擺出來。,[],0,1,0.0,0,未匹配可接受答案,1.258,4.515
+SmolVLM2-2.2B,2,image_classification,images/coco_000000357816.jpg,請判斷圖片中的人物正在參與哪一種運動？請只回答運動名稱。,"[""棒球""]",[],Baseball.,"[""棒球""]",1,1,1.0,1,符合可接受答案,0.561,4.611
+SmolVLM2-2.2B,3,image_classification,images/coco_000000159977.jpg,請判斷這張圖片主要呈現哪一種場景？請只回答場景類型。,"[""野生動物與草原場景"", ""野生動物場景""]",[],游風水,[],0,2,0.0,0,未匹配可接受答案,0.492,4.611
+SmolVLM2-2.2B,4,image_classification,images/coco_000000033114.jpg,請判斷圖片中的主要交通工具是什麼？請只回答交通工具名稱。,"[""飛機""]",[],Airplane,"[""飛機""]",1,1,1.0,1,符合可接受答案,0.402,4.611
+SmolVLM2-2.2B,5,object_recognition,images/coco_000000435208.jpg,請列出圖片中可以清楚辨識的主要家具。,"[""沙發"", ""桌子""]",[],"1. 台灯
+2. 台灯
+3. 台灯
+4. 台灯
+5. 台灯
+6. 台灯
+7. 台灯
+8. 台灯
+9. 台灯
+10. 台灯
+11. 台灯
+12. 台灯
+13. 台灯
+14. 台",[],0,2,0.0,0,辨識到 0/2 個指定物件,1.669,4.611
+SmolVLM2-2.2B,6,object_recognition,images/coco_000000231831.jpg,請列出圖片中最明顯的三種物件。,"[""貓"", ""桌子"", ""書本""]",[],"1. Cat: The main subject of the image is a black cat with a white chest and paws.
+2. Table: The cat is sitting on a red table, which is located in the middle of the image.
+3. Paper: There is a stack of white paper plates on the table.","[""貓"", ""桌子""]",2,3,0.6667,0,辨識到 2/3 個指定物件,1.154,4.611
+SmolVLM2-2.2B,7,object_recognition,images/coco_000000257169.jpg,照片中人物手持的主要物品是什麼？,"""吹風機""",[],照片中人物手持的主要物品是一支黑色的洗发巾和一支银色的深色棒。,[],0,1,0.0,0,辨識到 0/1 個指定物件,1.011,4.611
+SmolVLM2-2.2B,8,object_recognition,images/coco_000000369757.jpg,請辨識展示櫃中最主要的食物種類。,"[""披薩""]",[],最主要的食物種類是燕麥和燕麥燕麥。,[],0,1,0.0,0,辨識到 0/1 個指定物件,0.772,4.611
+SmolVLM2-2.2B,9,visual_question_answering,images/coco_000000261888.jpg,圖片中腳踏車騎士附近有幾匹馬？,"[""2"", ""兩匹"", ""兩隻""]",[],這裡有兩匹馬。,"[""2"", ""兩匹""]",2,3,0.6667,1,符合可接受答案,0.56,4.611
+SmolVLM2-2.2B,10,visual_question_answering,images/coco_000000202339.jpg,男子旁邊停放的是哪一種大型交通工具？,"[""公車"", ""巴士""]",[],男子停放的是一艘大型汽车。,[],0,2,0.0,0,未匹配可接受答案,0.635,4.611
+SmolVLM2-2.2B,11,visual_question_answering,images/coco_000000092091.jpg,小女孩手中拿著什麼玩具？,"[""泰迪熊"", ""絨毛熊"", ""玩偶熊""]",[],小女孩手中拿著一個粉色的玩具。,[],0,3,0.0,0,未匹配可接受答案,0.705,4.611
+SmolVLM2-2.2B,12,visual_question_answering,images/coco_000000428454.jpg,圖片中的男子腳下踩著什麼運動器材？,"[""滑雪板"", ""Snowboard""]",[],男子踩著滑雪運動器材。,[],0,2,0.0,0,未匹配可接受答案,0.671,4.611
+SmolVLM2-2.2B,13,image_captioning,images/coco_000000416885.jpg,Describe the main objects and scene in this image in one or two English sentences.,"""""","[""Three pastry desserts and two glasses of wine are on a table."", ""Two plates, one paired up with red wine and one paired up with white wine."", ""a grilled panini sits next to a glass of wine on a table"", ""Several desserts on white plates near a glass of wine."", ""multiple plates of food on a wooden table""]","In the image, there is a table with a glass of red wine, a plate with a slice of cake, and a plate with a pastry. The background is blurred, but it appears to be a restaurant.",[],0,0,,,使用 Caption 評估指標另行評估,0.833,4.611
+SmolVLM2-2.2B,14,image_captioning,images/coco_000000193162.jpg,"Describe the main objects, actions, and surroundings in this image in one or two English sentences.","""""","[""a man on a three wheeler following behind a two dogs and a cow"", ""A black and white cow walking across a lush green field."", ""A man is right behind a cow on green grass."", ""A man on a vehicle in a field and a few animals."", ""a cow walks as a man on a quad follows it""]","In the image, a man is riding a red tractor in a field, with a cow and two dogs nearby. The man is wearing a hat and a maroon shirt.",[],0,0,,,使用 Caption 評估指標另行評估,0.761,4.611
+SmolVLM2-2.2B,15,image_captioning,images/coco_000000073946.jpg,"Describe the people, objects, and their actions in this image in one or two English sentences.","""""","[""A couple of men standing on either side of a surfboard."", ""some men are looking at a design of a shark"", ""Two men fake biting a surfboard for a picture."", ""Two men biting a surfboard with a shark on it."", ""TWO MEN IMITATING A SHARK PICTURE ON A SURFBOARD""]","Two men are standing in a room, one of them is holding a surfboard with a shark on it.",[],0,0,,,使用 Caption 評估指標另行評估,0.63,4.611
+SmolVLM2-2.2B,16,image_captioning,images/coco_000000088432.jpg,Describe the main scene and visible vehicles in this image in one or two English sentences.,"""""","[""Some street signs near a road with a truck."", ""The street corner of a busy intersection in a town."", ""A road between the buildings where a big car is parked.A water hydrant is also seen."", ""A vehicle crosses an intersection near a building and a bus stop"", ""Truck driving through the intersection of Biltmore and Short Coxe Ave.""]","In the image, there is a street corner with a yellow fire hydrant, a white truck, and a traffic light.",[],0,0,,,使用 Caption 評估指標另行評估,0.656,4.611
+SmolVLM2-2.2B,17,attribute_spatial,images/coco_000000496954.jpg,圖片中的蛋糕是放在哪一種顏色的盤子上？,"[""白色""]",[],蛋糕在白色的盤子上。,"[""白色""]",1,1,1.0,1,符合可接受答案,0.595,4.611
+SmolVLM2-2.2B,18,attribute_spatial,images/coco_000000482719.jpg,圖片中的水果碗裡，哪一種黃色水果最明顯？,"[""香蕉""]",[],圖片中的水果碗裡，黃色的水果最明顯是蘋果。,[],0,1,0.0,0,未匹配可接受答案,0.805,4.611
+SmolVLM2-2.2B,19,attribute_spatial,images/coco_000000034257.jpg,圖片中胡蘿蔔的主要顏色是什麼？,"[""橘色"", ""橙色""]",[],胡蘿蔔的主要顏色是綠色和紅色。,[],0,2,0.0,0,未匹配可接受答案,0.742,4.611
+SmolVLM2-2.2B,20,attribute_spatial,images/coco_000000565776.jpg,圖片中央的廚房中島主要呈現什麼顏色？,"[""白色""]",[],在廚房中，島主要呈現粉紅色。,[],0,1,0.0,0,未匹配可接受答案,0.714,4.611

@@ -1,0 +1,6 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "loading_time_seconds": 6.723,
+  "num_questions": 20,
+  "average_latency_seconds": 0.44
+}

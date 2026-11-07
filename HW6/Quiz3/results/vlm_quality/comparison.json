@@ -1,0 +1,154 @@
+{
+  "original": {
+    "precision": {
+      "base": 0.8631578947368421,
+      "dpo": 0.8849557522123894,
+      "change": 0.0218
+    },
+    "recall": {
+      "base": 0.45555555555555555,
+      "dpo": 0.5555555555555556,
+      "change": 0.1
+    },
+    "f1": {
+      "base": 0.5963636363636363,
+      "dpo": 0.6825938566552902,
+      "change": 0.0862
+    },
+    "hallucination_rate": {
+      "base": 0.1368421052631579,
+      "dpo": 0.11504424778761062,
+      "change": -0.0218
+    },
+    "average_latency_sec": {
+      "base": 0.64782,
+      "dpo": 1.1899819999999999,
+      "change": 0.5422
+    },
+    "images_with_unmatched_predicted_categories_rate": {
+      "base": 0.2,
+      "dpo": 0.24,
+      "change": 0.04
+    },
+    "empty_prediction_rate": {
+      "base": 0.04,
+      "dpo": 0.02,
+      "change": -0.02
+    }
+  },
+  "dark_0.5": {
+    "precision": {
+      "base": 0.9080459770114943,
+      "dpo": 0.8695652173913043,
+      "change": -0.0385
+    },
+    "recall": {
+      "base": 0.4388888888888889,
+      "dpo": 0.5555555555555556,
+      "change": 0.1167
+    },
+    "f1": {
+      "base": 0.5917602996254682,
+      "dpo": 0.6779661016949152,
+      "change": 0.0862
+    },
+    "hallucination_rate": {
+      "base": 0.09195402298850575,
+      "dpo": 0.13043478260869565,
+      "change": 0.0385
+    },
+    "average_latency_sec": {
+      "base": 0.6147680000000001,
+      "dpo": 1.286454,
+      "change": 0.6717
+    },
+    "images_with_unmatched_predicted_categories_rate": {
+      "base": 0.14,
+      "dpo": 0.24,
+      "change": 0.1
+    },
+    "empty_prediction_rate": {
+      "base": 0.02,
+      "dpo": 0.0,
+      "change": -0.02
+    }
+  },
+  "resolution_0.25": {
+    "precision": {
+      "base": 0.8918918918918919,
+      "dpo": 0.8526315789473684,
+      "change": -0.0393
+    },
+    "recall": {
+      "base": 0.36666666666666664,
+      "dpo": 0.45,
+      "change": 0.0833
+    },
+    "f1": {
+      "base": 0.5196850393700787,
+      "dpo": 0.5890909090909091,
+      "change": 0.0694
+    },
+    "hallucination_rate": {
+      "base": 0.10810810810810811,
+      "dpo": 0.14736842105263157,
+      "change": 0.0393
+    },
+    "average_latency_sec": {
+      "base": 0.378164,
+      "dpo": 0.8998320000000001,
+      "change": 0.5217
+    },
+    "images_with_unmatched_predicted_categories_rate": {
+      "base": 0.16,
+      "dpo": 0.26,
+      "change": 0.1
+    },
+    "empty_prediction_rate": {
+      "base": 0.1,
+      "dpo": 0.06,
+      "change": -0.04
+    }
+  },
+  "blur_2": {
+    "precision": {
+      "base": 0.8311688311688312,
+      "dpo": 0.8152173913043478,
+      "change": -0.016
+    },
+    "recall": {
+      "base": 0.35555555555555557,
+      "dpo": 0.4166666666666667,
+      "change": 0.0611
+    },
+    "f1": {
+      "base": 0.4980544747081712,
+      "dpo": 0.5514705882352942,
+      "change": 0.0534
+    },
+    "hallucination_rate": {
+      "base": 0.16883116883116883,
+      "dpo": 0.18478260869565216,
+      "change": 0.016
+    },
+    "average_latency_sec": {
+      "base": 0.44993800000000017,
+      "dpo": 1.015826,
+      "change": 0.5659
+    },
+    "images_with_unmatched_predicted_categories_rate": {
+      "base": 0.2,
+      "dpo": 0.28,
+      "change": 0.08
+    },
+    "empty_prediction_rate": {
+      "base": 0.08,
+      "dpo": 0.08,
+      "change": 0.0
+    }
+  },
+  "peak_gpu_memory_gb": {
+    "base": 3.496,
+    "dpo": 2.759
+  }
+}
