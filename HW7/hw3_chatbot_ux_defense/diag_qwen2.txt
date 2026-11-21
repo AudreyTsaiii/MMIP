@@ -1,0 +1,75 @@
+OK  | 我想查物流 → 今天天氣如何 → TW20261108456
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「物流查詢」,方便提供訂單編號嗎?(例如 TW20'
+     step3 gate=None             回:'已為您建立「物流客服組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('logistics', 'TW20261108456')]
+OK  | 我想查物流 → 幫我用 Python 寫個函式 → TW20261108456
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「物流查詢」,方便提供訂單編號嗎?(例如 TW20'
+     step3 gate=None             回:'已為您建立「物流客服組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('logistics', 'TW20261108456')]
+OK  | 我想查物流 → 推薦一個食譜 → TW20261108456
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「物流查詢」,方便提供訂單編號嗎?(例如 TW20'
+     step3 gate=None             回:'已為您建立「物流客服組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('logistics', 'TW20261108456')]
+OK  | 我想查物流 → 下週股票會漲嗎 → TW20261108456
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「物流查詢」,方便提供訂單編號嗎?(例如 TW20'
+     step3 gate=None             回:'已為您建立「物流客服組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('logistics', 'TW20261108456')]
+OK  | 我想查物流 → 講個笑話 → TW20261108456
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「物流查詢」,方便提供訂單編號嗎?(例如 TW20'
+     step3 gate=None             回:'已為您建立「物流客服組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('logistics', 'TW20261108456')]
+OK  | 我想退貨 → 今天天氣如何 → TW20261030118
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「退換貨」,方便提供訂單編號嗎?(例如 TW202'
+     step3 gate=None             回:'已為您建立「售後退換貨組」工單 #T00001,預計 8 小時內回覆。'
+     tickets=[('return_exchange', 'TW20261030118')]
+OK  | 我想退貨 → 幫我用 Python 寫個函式 → TW20261030118
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「退換貨」,方便提供訂單編號嗎?(例如 TW202'
+     step3 gate=None             回:'已為您建立「售後退換貨組」工單 #T00001,預計 8 小時內回覆。'
+     tickets=[('return_exchange', 'TW20261030118')]
+OK  | 我想退貨 → 推薦一個食譜 → TW20261030118
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「退換貨」,方便提供訂單編號嗎?(例如 TW202'
+     step3 gate=None             回:'已為您建立「售後退換貨組」工單 #T00001,預計 8 小時內回覆。'
+     tickets=[('return_exchange', 'TW20261030118')]
+OK  | 我想退貨 → 下週股票會漲嗎 → TW20261030118
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「退換貨」,方便提供訂單編號嗎?(例如 TW202'
+     step3 gate=None             回:'已為您建立「售後退換貨組」工單 #T00001,預計 8 小時內回覆。'
+     tickets=[('return_exchange', 'TW20261030118')]
+OK  | 我想退貨 → 講個笑話 → TW20261030118
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「退換貨」,方便提供訂單編號嗎?(例如 TW202'
+     step3 gate=None             回:'已為您建立「售後退換貨組」工單 #T00001,預計 8 小時內回覆。'
+     tickets=[('return_exchange', 'TW20261030118')]
+OK  | 我要問發票 → 今天天氣如何 → TW20261102777
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「發票」,方便提供訂單編號嗎?(例如 TW2026'
+     step3 gate=None             回:'已為您建立「財務發票組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('invoice', 'TW20261102777')]
+OK  | 我要問發票 → 幫我用 Python 寫個函式 → TW20261102777
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「發票」,方便提供訂單編號嗎?(例如 TW2026'
+     step3 gate=None             回:'已為您建立「財務發票組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('invoice', 'TW20261102777')]
+OK  | 我要問發票 → 推薦一個食譜 → TW20261102777
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「發票」,方便提供訂單編號嗎?(例如 TW2026'
+     step3 gate=None             回:'已為您建立「財務發票組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('invoice', 'TW20261102777')]
+OK  | 我要問發票 → 下週股票會漲嗎 → TW20261102777
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「發票」,方便提供訂單編號嗎?(例如 TW2026'
+     step3 gate=None             回:'已為您建立「財務發票組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('invoice', 'TW20261102777')]
+OK  | 我要問發票 → 講個笑話 → TW20261102777
+     step1 gate=None             回:'方便提供訂單編號嗎?(例如 TW20261105009)'
+     step2 gate=offtopic_resume  回:'這部分我沒辦法協助。回到剛剛的「發票」,方便提供訂單編號嗎?(例如 TW2026'
+     step3 gate=None             回:'已為您建立「財務發票組」工單 #T00001,預計 24 小時內回覆。'
+     tickets=[('invoice', 'TW20261102777')]

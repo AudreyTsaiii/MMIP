@@ -1,0 +1,6 @@
+checkpoints/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/sft/images/
+results/guard_imgs/

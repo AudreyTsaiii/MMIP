@@ -1,0 +1,44 @@
+{
+ "baseline_no_transition": {
+  "dialogues": 12,
+  "all_issues_solved%": 100.0,
+  "avg_user_turns": 3.33,
+  "avg_user_reraises": 1.33,
+  "avg_order_id_typed": 1.25,
+  "per_dialogue_turns": [
+   2,
+   4,
+   2,
+   2,
+   3,
+   2,
+   3,
+   6,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ "with_topic_transition": {
+  "dialogues": 12,
+  "all_issues_solved%": 100.0,
+  "avg_user_turns": 3.08,
+  "avg_user_reraises": 0,
+  "avg_order_id_typed": 1.17,
+  "per_dialogue_turns": [
+   2,
+   2,
+   3,
+   2,
+   3,
+   2,
+   3,
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ }
+}

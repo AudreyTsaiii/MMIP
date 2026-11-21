@@ -1,0 +1,8 @@
+pydantic>=2.5
+pillow
+scikit-learn
+gradio>=4.40
+pytest
+rapidocr-onnxruntime   # 圖片 OCR 備援(無 tesseract 時)
+# 真實 VLM 實驗(GPU)額外需要:
+# torch transformers>=4.49 accelerate peft qwen-vl-utils

@@ -1,0 +1,7 @@
+pydantic>=2.5
+pillow
+scikit-learn
+gradio>=4.40
+pytest
+# 真實 VLM 實驗(GPU)額外需要:
+# torch transformers>=4.49 accelerate peft lm-format-enforcer qwen-vl-utils

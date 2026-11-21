@@ -1,0 +1,87 @@
+{
+ "backend": "qwen",
+ "sizes": {
+  "IN": 22,
+  "OOS": 28,
+  "SMALL": 8,
+  "AMBIG": 6
+ },
+ "single_turn": {
+  "P1_label_only": {
+   "distribution": {
+    "IN": {
+     "DISPATCH": 12,
+     "ASK": 10,
+     "MENU": 0,
+     "SMALL": 0
+    },
+    "OOS": {
+     "DISPATCH": 4,
+     "ASK": 4,
+     "MENU": 20,
+     "SMALL": 0
+    },
+    "SMALL": {
+     "DISPATCH": 0,
+     "ASK": 0,
+     "MENU": 0,
+     "SMALL": 8
+    },
+    "AMBIG": {
+     "DISPATCH": 3,
+     "ASK": 2,
+     "MENU": 1,
+     "SMALL": 0
+    }
+   },
+   "false_entry%": 22.2,
+   "over_refusal%": 0.0,
+   "oos_redirect_rate%": 71.4
+  },
+  "P2_full_policy": {
+   "distribution": {
+    "IN": {
+     "DISPATCH": 12,
+     "ASK": 10,
+     "MENU": 0,
+     "SMALL": 0
+    },
+    "OOS": {
+     "DISPATCH": 3,
+     "ASK": 1,
+     "MENU": 24,
+     "SMALL": 0
+    },
+    "SMALL": {
+     "DISPATCH": 0,
+     "ASK": 0,
+     "MENU": 0,
+     "SMALL": 8
+    },
+    "AMBIG": {
+     "DISPATCH": 3,
+     "ASK": 2,
+     "MENU": 1,
+     "SMALL": 0
+    }
+   },
+   "false_entry%": 11.1,
+   "over_refusal%": 0.0,
+   "oos_redirect_rate%": 85.7
+  }
+ },
+ "multi_turn_resume": {
+  "P1_label_only": {
+   "case_completed_correctly%": 73.3,
+   "explicit_redirect%": 0.0,
+   "ticket_slot_pollution%": 0.0,
+   "n": 15
+  },
+  "P2_full_policy": {
+   "case_completed_correctly%": 100.0,
+   "explicit_redirect%": 100.0,
+   "ticket_slot_pollution%": 0.0,
+   "n": 15
+  }
+ }
+}

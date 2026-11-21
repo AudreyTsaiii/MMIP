@@ -1,0 +1,63 @@
+digraph G {
+  rankdir=TB; compound=true; nodesep=0.35; ranksep=0.5; fontname="Noto Sans CJK TC";
+  node [shape=box, style="rounded,filled", fillcolor="#F7F9FC", color="#4A5568", fontname="Noto Sans CJK TC", fontsize=11];
+  edge [color="#4A5568", fontname="Noto Sans CJK TC", fontsize=9];
+
+  user [label="使用者\n文字 / 照片(可多張)/ 純圖片 / 空訊息 / 快速回覆按鈕", shape=oval, fillcolor="#E6FFFA"];
+
+  subgraph cluster_guard { label="① 輸入防禦層 InputGuard(越前面越便宜)"; style="rounded,dashed"; color="#C53030"; fontname="Noto Sans CJK TC";
+    g0 [label="L0 資源限制\n長度>3000 / 重複洪水≥3 / 圖片>8MB・>6000px・毀損"];
+    g1 [label="L1 正規化\nNFKC・零寬字元・字母間分隔符・leetspeak・base64 解碼"];
+    g2 [label="L2 規則\noverride / leak / roleplay / fake_tag / privilege / exfil / abuse"];
+    g3 [label="L2.5 語意分類器\nchar n-gram + LR(抓換句話說的攻擊)"];
+    g4 [label="圖片:重新編碼(去 EXIF)+ OCR\n圖中文字走同一套 L1~L2.5(影像 injection)"];
+  }
+  verdict [label="Verdict", shape=diamond, fillcolor="#FFF5F5"];
+  strike [label="攻擊處理:不寫入 history(不污染上下文)\nstrike 1/2 婉拒 → 3 次鎖定,建『資安』工單並轉真人\n辱罵+有問題 → 降溫繼續;純辱罵 → 安撫+轉真人選項", fillcolor="#FFF5F5"];
+
+  subgraph cluster_gate { label="② 閘門 Scope Gate(不呼叫模型即可處理)"; style="rounded,dashed"; color="#2B6CB0"; fontname="Noto Sans CJK TC";
+    sm [label="閒聊/致謝/道別/應答 → 短回覆\n(沒有進行中案件時,『好』『嗯』不當新案件)"];
+    oc [label="離題 off-topic(無業務訊號+離題線索)\n→ 婉拒;有進行中案件則『回到剛剛的…』拉回\n連續3次 → 建議轉真人"];
+  }
+
+  ctx [label="③ Context Builder\n最近 6 則 / 只保留最近 2 張圖進模型\n舊圖濃縮為 image_findings(省 token + 隔離)"];
+
+  subgraph cluster_node { label="④ 分流節點 Triage Node(可替換:A / B / C / D)"; style="rounded"; color="#2F855A"; fontname="Noto Sans CJK TC";
+    A [label="A Prompt\n規則+schema+few-shot", fillcolor="#F0FFF4"];
+    B [label="B SFT(LoRA)\n極短 prompt;+RLVR reward", fillcolor="#F0FFF4"];
+    C [label="C Constrained Decoding\nJSON-Schema 文法約束", fillcolor="#F0FFF4"];
+    s1 [label="D-System One\n單次 forward 讀 8 類機率", fillcolor="#C6F6D5"];
+    s2 [label="D-System Two\n已知 intent,只約束生成 {urgency, slots}", fillcolor="#C6F6D5"];
+    fast [label="OFF_TOPIC / UNSAFE 且信心高\n→ 直接結束(0 次生成)", fillcolor="#C6F6D5"];
+    slow [label="信心 < τ → 慢路徑\n(C 完整約束生成)", fillcolor="#C6F6D5"];
+    s1 -> fast [label="fast"]; s1 -> s2 [label="conf≥τ"]; s1 -> slow [label="conf<τ"];
+  }
+  safe [label="SafeNode 降級鏈\nJSON/schema 無效或逾時/OOM → RuleBackend → 轉真人", fillcolor="#FFFAF0"];
+  derive [label="⑤ 確定性推導(不交給模型)\ndepartment = enum 映射 / missing_slots / need_clarification", fillcolor="#EBF8FF"];
+
+  subgraph cluster_dm { label="⑥ 對話管理 Dialog Manager(狀態機)"; style="rounded"; color="#6B46C1"; fontname="Noto Sans CJK TC";
+    st [label="Session 狀態\nactive case・pending 佇列・last_order_id・strikes・offtopic_streak", shape=note, fillcolor="#FAF5FF"];
+    cm [label="案件管理\n槽位跨輪合併・補槽短答維持原案件\n換題詞(算了/改成)→ 放棄舊案;新需求 → pending"];
+    ask [label="缺欄位 → 一次只追問 1 項(附快速按鈕)\n同訂單沿用確認『是同一筆嗎?』;追問>3 次 → 轉真人"];
+    nxt [label="話題銜接:處理完主動接 pending\n否則『還有其他需要嗎?』"];
+  }
+
+  subgraph cluster_down { label="⑦ 下游派工 Dispatcher"; style="rounded"; color="#B7791F"; fontname="Noto Sans CJK TC";
+    disp [label="建單:退換貨 / 物流 / 維修品保 / 發票 / 技術支援 / 真人主管\nSLA 依 urgency(1h / 8h / 24h)"];
+    q [label="下游故障 → 工單 queued 保存,恢復後 flush;\n對使用者說『已受理,不需重說』", fillcolor="#FFFAF0"];
+  }
+
+  out [label="⑧ 回覆組裝(100% 程式模板,LLM 不直接對使用者說話)→ OutputGuard\ncanary 外洩 / 禁用語 / 長度 → 失敗則改用安全模板", fillcolor="#FFF5F5"];
+  ui [label="⑨ UI(Gradio)\n依字數估閱讀時間分段送出・快速回覆按鈕・圖片預覽・內部狀態面板", shape=oval, fillcolor="#E6FFFA"];
+
+  user -> g0 -> g1 -> g2 -> g3 -> verdict; g0 -> g4 [style=dotted, label="image"]; g4 -> g2 [style=dotted];
+  verdict -> strike [label="block"]; strike -> out;
+  verdict -> sm [label="allow / warn"]; sm -> out [label="命中"]; sm -> oc [label="未命中"]; oc -> out [label="命中"];
+  oc -> ctx [label="in-domain / 不確定"];
+  ctx -> A; ctx -> B; ctx -> C; ctx -> s1;
+  A -> safe; B -> safe; C -> safe; fast -> safe; s2 -> safe; slow -> safe;
+  safe -> derive -> cm; st -> cm [style=dashed, dir=both];
+  cm -> ask [label="缺槽"]; cm -> disp [label="齊全"]; ask -> out;
+  disp -> q [style=dashed, label="失敗"]; disp -> nxt; q -> nxt; nxt -> out; out -> ui;
+  safe -> out [label="全失敗→轉真人", style=dashed];
+}
