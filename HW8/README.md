@@ -61,7 +61,7 @@
 3. **非極大值抑制**（Non-Maximum Suppression，目的是讓邊緣變細）
 4. **雙門檻與滯後追蹤**（hysteresis，用於連接邊緣）
 
-<details><summary>Reference（✅ 命中標準答案來源）</summary>
+<details><summary>Reference（命中標準答案來源）</summary>
 
 - [1] Q034（QA，出自 D06《邊緣偵測》）（score 0.0325）：Q：Canny 邊緣偵測包含哪四個步驟？ A：高斯降噪、計算梯度強度與方向、非極大值抑制、雙門檻與滯後追蹤。…
 - [2] G034（QA，出自 D06《邊緣偵測》）（score 0.0323）：Q：Canny 邊緣偵測的第三步說要做非極大值抑制，這是在幹嘛的？ A：非極大值抑制的目的是讓邊緣變細。…
@@ -76,7 +76,7 @@
 🔁 改寫：Canny 邊緣偵測流程中的非極大值抑制（Non-Maximum Suppression）是做什麼的？  
 **助教：** 根據資料 [1]、[2] 與 [3]，Canny 邊緣偵測流程中的非極大值抑制（Non-Maximum Suppression）的目的是**讓邊緣變細**。
 
-<details><summary>Reference（✅ 命中標準答案來源）</summary>
+<details><summary>Reference（命中標準答案來源）</summary>
 
 - [1] G034（QA，出自 D06《邊緣偵測》）（score 0.0328）：Q：Canny 邊緣偵測的第三步說要做非極大值抑制，這是在幹嘛的？ A：非極大值抑制的目的是讓邊緣變細。…
 - [2] Q035（QA，出自 D06《邊緣偵測》）（score 0.032）：Q：Canny 中非極大值抑制的目的是什麼？ A：讓邊緣變細。…
@@ -91,7 +91,7 @@
 🔁 改寫：在 Canny 邊緣偵測的雙門檻與滯後追蹤步驟中，介於高門檻與低門檻中間的像素點會怎麼處理？  
 **助教：** 根據上述資料，在 Canny 邊緣偵測的雙門檻中，介於兩門檻之間的像素**只有在與強邊緣相連時才會被保留**。
 
-<details><summary>Reference（✅ 命中標準答案來源）</summary>
+<details><summary>Reference（命中標準答案來源）</summary>
 
 - [1] Q036（QA，出自 D06《邊緣偵測》）（score 0.0325）：Q：Canny 雙門檻中介於兩門檻之間的像素如何處理？ A：只有與強邊緣相連時才會被保留。…
 - [2] D06《邊緣偵測》第 305–433 字（score 0.0325）：方向，第三步進行非極大值抑制（Non-Maximum Suppression）讓邊緣變細，第四步使用雙門檻與滯後追蹤（hysteresis）連接邊緣。在 Canny 的雙門檻中，高於高門檻的像素是強邊緣，介於兩門檻之間的像素只有在與強邊緣相…
