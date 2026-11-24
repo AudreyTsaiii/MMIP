@@ -1,0 +1,3 @@
+# 選用：裝了會自動啟用
+sentence-transformers   # VideoRAG 的 CLIP 影格向量（clip-ViT-B-32）；沒裝則用色彩直方圖
+openai-whisper          # 本機語音轉文字（省 API 額度）；沒裝則用 Gemini 轉逐字稿

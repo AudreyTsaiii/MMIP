@@ -1,0 +1,4 @@
+mode,video_hit1,video_mrr,segment_hit,best_tiou,frame_temporal_precision,frame_relevance_precision,mm_faithfulness,answer_relevancy,answer_correctness
+full,1.0,1.0,0.75,0.127,0.25,0.406,1.0,0.808,0.792
+speech_only,0.875,0.938,0.75,0.127,,,0.5,0.393,0.458
+visual_only,1.0,1.0,0.75,0.127,0.281,,1.0,0.777,0.833

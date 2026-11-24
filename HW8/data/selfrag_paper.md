@@ -1,0 +1,59 @@
+# Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection
+
+Source: Asai, Wu, Wang, Sil, Hajishirzi. arXiv:2310.11511 (ICLR 2024). The notes below are a condensed restatement of the main paper (Sections 1–6) prepared for the GraphRAG homework. If `data/selfrag.pdf` exists, `hw4/graphrag.py --pdf` builds the graph from the full PDF instead.
+
+## Authors and affiliations
+Self-RAG was written by Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil and Hannaneh Hajishirzi. Akari Asai, Zeqiu Wu, Yizhong Wang and Hannaneh Hajishirzi are at the University of Washington. Yizhong Wang and Hannaneh Hajishirzi are also at the Allen Institute for AI (AI2). Avirup Sil is at IBM Research AI. Akari Asai is supported by the IBM Fellowship. Stability AI provided compute for training and evaluating the models.
+
+## Motivation
+Large language models (LLMs) often produce factual errors because they rely only on parametric knowledge. Retrieval-Augmented Generation (RAG), proposed by Lewis et al. (2020) and Guu et al. (2020), reduces factual errors by adding retrieved passages to the input. However, conventional RAG retrieves a fixed number of passages indiscriminately, whether or not retrieval is necessary and whether or not the passages are relevant. This can hurt the versatility of the LM, introduce off-topic passages, and produce low-quality generations. Conventional RAG also does not guarantee that the output is consistent with the retrieved passages, because the models are not explicitly trained to follow facts from the passages.
+
+## Core idea
+Self-Reflective Retrieval-Augmented Generation (Self-RAG) trains a single arbitrary LM end-to-end to retrieve on demand and to reflect on its own generation. The LM generates both task output and special tokens called reflection tokens. Reflection tokens are divided into retrieval tokens and critique tokens. Generating reflection tokens makes the LM controllable at inference time. Self-RAG also provides a citation for each output segment together with a self-assessment of whether the output is supported by the passage, which makes fact verification easier.
+
+## Reflection tokens
+There are four types of reflection tokens.
+- Retrieve: input is x or (x, y); output values are yes, no, or continue; it decides when to call the retriever R.
+- IsRel (relevance): input is (x, d); output values are relevant or irrelevant; it judges whether passage d provides useful information to solve x.
+- IsSup (support): input is (x, d, y); output values are fully supported, partially supported, or no support; it judges whether all verification-worthy statements in y are supported by d.
+- IsUse (utility): input is (x, y); output values are 5, 4, 3, 2, 1; it judges whether y is a useful response to x.
+IsRel, IsSup and IsUse are the three critique token types. The most desirable values are relevant, fully supported and 5.
+
+## Inference procedure (Algorithm 1)
+Given an input x and the preceding generation y<t, the generator M first predicts the Retrieve token (Step 1: decide whether to retrieve). If Retrieve is yes, the retriever R retrieves relevant passages D. For each passage d, M predicts IsRel and generates a candidate segment y_t, processing multiple passages in parallel (Step 2: generate). M then predicts IsSup and IsUse for each candidate (Step 3: critique) and ranks the candidates using IsRel, IsSup and IsUse to choose the best one. If Retrieve is no, M generates y_t like a standard LM and predicts only IsUse.
+
+## Training overview
+Self-RAG trains two models: a critic model C and a generator model M. Reflection tokens are added to the model vocabulary so that they are predicted with the normal next-token objective. The critic inserts reflection tokens into the training corpus offline, so the critic does not need to be hosted while training the generator, which reduces training cost compared with reinforcement learning methods such as PPO used in RLHF.
+
+## Training the critic model
+Manually annotating reflection tokens is expensive. GPT-4 is used to generate reflection tokens, but depending on a proprietary LM raises API costs and reduces reproducibility, so the knowledge of GPT-4 is distilled into an in-house critic C. For each reflection token type, GPT-4 is prompted with a type-specific instruction and few-shot demonstrations; for Retrieve the instruction asks whether finding external documents from the web helps to generate a better response. 4k to 20k supervised examples are collected for each token type. The critic is initialised from a pre-trained LM (Llama 2-7B, the same base as the generator) and trained with a standard conditional language modelling objective that maximises the likelihood of reflection tokens given (x, y). The critic achieves higher than 90% agreement with GPT-4 predictions on most reflection token categories.
+
+## Training the generator model
+To create generator training data, for each output segment y_t the critic C decides whether retrieval would help. If it would, the token Retrieve=Yes is inserted and the retriever R retrieves the top K passages. The critic then predicts IsRel for each passage, and IsSup for relevant passages. At the end of the output, the critic predicts IsUse. The augmented examples form the corpus D_gen. The generator M is trained with the standard next-token objective to predict both the target output and the reflection tokens. Retrieved passages (surrounded by <p> and </p>) are masked out from the loss, and the vocabulary is expanded with the reflection tokens. Unlike the critic, the generator learns to generate reflection tokens by itself, so no critic is needed at inference time.
+
+## Controllable decoding at inference
+Adaptive retrieval with threshold: retrieval is triggered when the normalised probability of Retrieve=Yes exceeds a threshold delta. A larger threshold leads to less retrieval. Tree decoding with critique tokens: at each segment step, the generator processes K retrieved passages in parallel and produces K continuation candidates, and a segment-level beam search with beam size B keeps the best continuations. Each segment is scored by its generation probability plus a critic score S, which is a weighted linear sum of the normalised probabilities of the most desirable token of each critique type (IsRel, IsSup, IsUse). The weights w_G can be changed at inference time without retraining; for example a higher IsSup weight emphasises evidence support. Hard constraints are also possible, such as filtering out a segment when IsSup = No support.
+
+## Experimental setup
+Training data: 150k instruction-output pairs sampled from Open-Instruct processed data and knowledge-intensive datasets. Generators: Llama 2 7B and 13B. Critic: Llama 2 7B. Retriever: Contriever-MS MARCO by default, retrieving up to ten documents per input. Inference defaults: IsRel weight 1.0, IsSup weight 1.0, IsUse weight 0.5; retrieval threshold 0.2 for most tasks and 0 for ALCE because of citation requirements; beam width 2 at the segment level; greedy decoding at the token level; vLLM is used to speed up inference. By default the top five documents from Contriever are used; for biographies and open-domain QA, five additional documents from a web search engine are added; for ASQA, the top five documents from GTR-XXL provided by the ALCE authors are used.
+
+## Tasks and metrics
+All evaluations are zero-shot. Closed-set tasks: PubHealth (fact verification about public health) and ARC-Challenge (multiple-choice science reasoning), evaluated by accuracy. Short-form generation: PopQA (long-tail subset of 1,399 rare-entity queries) and TriviaQA-unfiltered (11,313 test queries), evaluated by whether gold answers are included in the generation. Long-form generation: biography generation evaluated with FactScore, and ALCE-ASQA evaluated with correctness (str-em), fluency (MAUVE), and citation precision and recall.
+
+## Baselines
+Baselines without retrieval include Llama2 7B/13B, Alpaca 7B/13B, ChatGPT, Llama2-chat 13B, and CoVE 65B. Baselines with retrieval include standard RAG with Llama2 and Alpaca, Llama2-FT (Llama2 fine-tuned on the same training data without reflection tokens or retrieved passages), Ret-ChatGPT, Ret-Llama2-chat, perplexity.ai, SAIL, and Toolformer.
+
+## Main results
+Self-RAG 7B scores: PopQA 54.9, TriviaQA 66.4, PubHealth 72.4, ARC-Challenge 67.3, Bio FactScore 81.2, ASQA str-em 30.0, rouge 35.7, MAUVE 74.3, citation precision 66.9, citation recall 67.8. Self-RAG 13B scores: PopQA 55.8, TriviaQA 69.3, PubHealth 74.5, ARC-Challenge 73.1, Bio FactScore 80.2, ASQA str-em 31.7, rouge 37.0, MAUVE 71.6, citation precision 70.3, citation recall 71.3. ChatGPT without retrieval scores PopQA 29.3, PubHealth 70.1 and ARC 75.3. Ret-ChatGPT scores PopQA 50.8 and ASQA citation precision 65.1. Self-RAG outperforms retrieval-augmented ChatGPT on four tasks and outperforms Llama2-chat and Alpaca on all tasks. It achieves the best performance among non-proprietary models on all tasks, and outperforms ChatGPT in citation precision on ASQA. Self-RAG 7B sometimes outperforms 13B on factual precision because the smaller model tends to generate precisely grounded but shorter outputs. Llama2-FT 7B lags behind Self-RAG, which shows that the gains do not come only from the training data. Baselines with retrieval give limited gains on PubHealth and ARC-Challenge, where answers cannot simply be copied from passages.
+
+## Ablation studies
+Ablations use a 7B model trained on 50k instances and evaluate PopQA, PubHealth and ASQA. Full Self-RAG (50k): PopQA 45.5, PubHealth 73.5, ASQA 32.1. No Retriever (trained without retrieved passages): 43.6, 67.8, 31.0. No Critic (always augmented with the top-1 document, without reflection tokens, similar to SAIL): 42.6, 72.0, 18.1. No retrieval at test time: PopQA 24.7, PubHealth 73.0. Hard constraints: 28.3, 72.6. Retrieve top 1: 41.8, 73.1, 28.6. Remove IsSup from beam search: 44.1, 73.2, 30.6. All components play important roles; using top passages regardless of relevance causes a large drop on PopQA and ASQA, and removing IsSup hurts ASQA.
+
+## Analysis
+Inference-time customization: increasing the IsSup weight improves ASQA citation precision but lowers MAUVE fluency, because longer and more fluent generations contain more claims not fully supported by citations. Efficiency and accuracy trade-off: as the retrieval threshold changes, retrieval frequency changes dramatically; retrieving less hurts PopQA more than PubHealth. Training data size: models trained on 5k, 10k, 20k, 50k and 150k instances show that more data generally improves performance, especially on PopQA and ASQA, while Llama2-FT does not improve much from 50k to 150k. Human evaluation on 50 PopQA and Bio samples: S&P (plausible and supported) is 92.5 on PopQA and 70.0 on Bio; IsRel agreement is 95.0 and 90.0; IsSup agreement is 90.0 and 85.0.
+
+## Related work
+Self-RAG differs from adaptive retrieval methods such as Jiang et al. (2023) that work on top of proprietary LLMs, and from Toolformer (Schick et al., 2023), which trains an LM to generate API calls. Concurrent work includes Lin et al. (2023), who fine-tune both the retriever and the LM; Yoran et al. (2023), who use a natural language inference model to filter passages; Xu et al. (2023), who use a summarization model to compress passages; and LATS (Zhou et al., 2023), which uses tree search guided by LM value scores. Compared with RLHF using PPO, Self-RAG computes critique offline. Self-RAG is related to control-token methods such as Keskar et al. (2019) and Lu et al. (2022).
+
+## Conclusion and limitations
+Self-RAG improves the quality and factuality of LLMs through retrieval on demand and self-reflection. Its outputs can still be not fully supported by the citations, and the authors hope explicit self-reflection and fine-grained attribution help users verify factual errors.

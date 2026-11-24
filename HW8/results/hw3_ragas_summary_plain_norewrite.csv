@@ -1,0 +1,3 @@
+setting,faithfulness,answer_relevancy,context_relevancy,context_precision,context_recall,answer_correctness
+multiturn,1.0,0.7662,0.2484,0.8174,1.0,0.8224
+overall,1.0,0.7662,0.2484,0.8174,1.0,0.8224

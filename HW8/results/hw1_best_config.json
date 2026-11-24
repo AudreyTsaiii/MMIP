@@ -1,0 +1,51 @@
+{
+  "embedder": "BAAI/bge-m3",
+  "chunk_size": 150,
+  "overlap": 75,
+  "top_k": 6,
+  "stability": 0.9009,
+  "mean_mrr5": 0.9397,
+  "std": 0.0388,
+  "recall_curve": [
+    {
+      "K": 1,
+      "recall_at_K": 0.8963
+    },
+    {
+      "K": 2,
+      "recall_at_K": 0.9556
+    },
+    {
+      "K": 3,
+      "recall_at_K": 0.9593
+    },
+    {
+      "K": 4,
+      "recall_at_K": 0.9815
+    },
+    {
+      "K": 5,
+      "recall_at_K": 0.9852
+    },
+    {
+      "K": 6,
+      "recall_at_K": 0.9852
+    },
+    {
+      "K": 8,
+      "recall_at_K": 0.9926
+    },
+    {
+      "K": 10,
+      "recall_at_K": 0.9963
+    }
+  ],
+  "technique": "plain",
+  "prompt_scores": {
+    "plain": 0.8866,
+    "fewshot": 0.8638,
+    "grounded": 0.8411,
+    "stepback": 0.8385,
+    "cot": 0.8375
+  }
+}

@@ -1,0 +1,66 @@
+[
+ {
+  "q": "Canny邊緣偵測演算法總共有幾個步驟？",
+  "answer": "共有四個步驟。",
+  "start": 0.0,
+  "end": 4.0,
+  "needs": "speech",
+  "followup": {
+   "q": "那麼這四個步驟的第一步是什麼？",
+   "answer": "第一步是高斯濾波去除雜訊。",
+   "start": 5.0,
+   "end": 9.0,
+   "needs": "speech"
+  },
+  "id": "canny_explain_0",
+  "video_id": "canny_explain"
+ },
+ {
+  "q": "在影像畫面中，第三步驟被稱為什麼？",
+  "answer": "非極大值抑制（NMS）。",
+  "start": 16.0,
+  "end": 20.0,
+  "needs": "visual",
+  "followup": {
+   "q": "它的主要功能是什麼？",
+   "answer": "抑制非極大值，只保留局部最大值，這會讓粗邊變得更細。",
+   "start": 16.0,
+   "end": 25.0,
+   "needs": "speech"
+  },
+  "id": "canny_explain_1",
+  "video_id": "canny_explain"
+ },
+ {
+  "q": "影片中的繪圖軟體使用者，在畫面右側繪製了什麼形狀？",
+  "answer": "一個紅色的三角形。",
+  "start": 20,
+  "end": 22,
+  "needs": "visual",
+  "followup": {
+   "q": "那使用者在繪製完這個三角形後，接著又做了什麼操作？",
+   "answer": "接著使用了填色工具，將三角形內部填滿了綠色。",
+   "start": 114,
+   "end": 116,
+   "needs": "visual"
+  },
+  "id": "photo_edit_0",
+  "video_id": "photo_edit"
+ },
+ {
+  "q": "使用者在畫面上方的橢圓形框內輸入了什麼單字？",
+  "answer": "輸入了「Hello」。",
+  "start": 47,
+  "end": 48,
+  "needs": "visual",
+  "followup": {
+   "q": "之後它是如何改變這個單字的樣式的？",
+   "answer": "它將字體顏色更改為紅色，並將橢圓形框的內部填滿了紅色。",
+   "start": 110,
+   "end": 113,
+   "needs": "visual"
+  },
+  "id": "photo_edit_1",
+  "video_id": "photo_edit"
+ }
+]

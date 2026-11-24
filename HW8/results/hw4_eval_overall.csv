@@ -1,0 +1,4 @@
+system,keypoint_recall,judge_score
+graphrag,0.685,0.775
+no_rag,0.47,0.642
+vanilla_rag,0.661,0.858

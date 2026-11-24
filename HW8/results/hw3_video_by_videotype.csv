@@ -1,0 +1,3 @@
+video_has_speech,video_hit1,video_mrr,segment_hit,best_tiou,frame_temporal_precision,frame_relevance_precision,mm_faithfulness,answer_relevancy,answer_correctness
+False,1.0,1.0,0.5,0.038,0.125,0.562,1.0,0.781,0.667
+True,1.0,1.0,1.0,0.216,0.375,0.25,1.0,0.835,0.917

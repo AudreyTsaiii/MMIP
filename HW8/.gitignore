@@ -1,0 +1,11 @@
+# 機密
+.env
+# 快取與暫存
+.cache/
+__pycache__/
+*.pyc
+.gradio/
+# 影片與抽出的影格很大，預設不進 repo（要交影片請另外上傳雲端並在報告放連結）
+data/videos/*
+!data/videos/.gitkeep
+results/video_store/

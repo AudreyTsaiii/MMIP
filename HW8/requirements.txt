@@ -1,0 +1,13 @@
+# 核心（必要）
+google-genai>=1.0
+numpy
+pandas
+scikit-learn
+rank_bm25
+networkx>=3.2
+matplotlib
+tabulate
+gradio>=6.0
+opencv-python-headless
+pypdf
+imageio-ffmpeg      # 附帶 ffmpeg 執行檔，用來從影片抽音訊（Windows 不必另外裝 ffmpeg）
